@@ -1,0 +1,10 @@
+
+.sugglocname
+{ 
+    margin-bottom: 0.5vw;
+}
+
+.sugglocname:hover
+{
+   background-color: lightgrey;
+}

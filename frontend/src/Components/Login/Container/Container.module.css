@@ -1,0 +1,48 @@
+.container 
+{
+    width: 75%;
+    height: 85%;
+    background: url('../../../Assests/Login/BackgroundImg.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    position:absolute;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 12.3vw;
+    top:0;
+    margin-top:5rem;
+   flex-direction: row;
+}
+
+@media screen and (max-width:990px) {
+    .container{
+        flex-direction: column;
+        margin-top: 0.5rem;
+    }
+
+    .container{
+        overflow-y: scroll;
+    }
+    .container::-webkit-scrollbar{
+       display: none;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .container{
+        flex-direction: column;
+        margin-top: 0.5rem;
+        width:100%;
+        margin: 1vw;
+        height: 90%;
+    }
+
+    .container{
+        overflow-y: scroll;
+        position: fixed;
+    }
+    .container::-webkit-scrollbar{
+       display: none;
+    }
+}

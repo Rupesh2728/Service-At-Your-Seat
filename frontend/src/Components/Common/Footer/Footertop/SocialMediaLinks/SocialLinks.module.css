@@ -1,0 +1,46 @@
+ .sociallinks{
+      margin-bottom: 30px;
+      text-decoration: none;
+    }
+
+    .socialmedialinks
+    {
+        margin-top: 3;
+    }
+    
+    .socialmedialinks a {
+      font-size: 18px;
+      display: inline-block;
+      color: #fff;
+      line-height: 1;
+      padding: 8px 0;
+      margin-right: 4px;
+      border-radius: 4px;
+      text-align: center;
+      width: 36px;
+      height: 36px;
+      transition: 0.3s;
+    }
+    
+    .socialmedialinks a:hover {
+      background-color: red;
+      text-decoration: none;
+    }
+
+ 
+   @media screen and (max-width:500px) {
+     .sociallinks
+     {
+        margin-bottom: 5px;
+     }
+
+     .sociallinks a{
+       font-size: 4.5vw;
+       padding-top: 0;
+     };
+
+  }
+
+  @media screen and (max-width:400px) {
+   
+ }

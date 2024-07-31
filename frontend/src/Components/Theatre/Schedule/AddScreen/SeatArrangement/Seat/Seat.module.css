@@ -1,0 +1,81 @@
+.nc{
+    background-color: lightpink;
+    width:1.4rem;
+    height:1.4rem;
+    border-radius: 5px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
+    margin-left: 0.85rem;
+    margin-right: 0.85rem;
+ }
+ 
+ .sold
+ { 
+    width:1.4rem;
+    height:1.4rem;
+    border-radius: 5px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
+    background-color: red; 
+    margin-left: 0.85rem;
+    margin-right: 0.85rem;
+ }
+ 
+ .selected
+ {
+    width:1.4rem;
+    height:1.4rem;
+    border-radius: 5px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
+   background-color: green;
+   margin-left: 0.85rem;
+   margin-right: 0.85rem;
+ }
+ 
+ .pc
+ {
+    width:1.4rem;
+    height:1.4rem;
+    border-radius: 5px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
+    background-color: blue;
+    margin-left: 0.85rem;
+    margin-right: 0.85rem;
+ }
+ 
+ .es{
+    width:1.4rem;
+    height:1.4rem;
+    border-radius: 5px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
+    background: transparent;
+    margin-left: 0.85rem;
+    margin-right: 0.85rem;
+ }
+ 
+ .dc
+ {  
+    width:1.4rem;
+    height:1.4rem;
+    border-radius: 5px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
+    background-color: brown;
+    margin-left: 0.85rem;
+    margin-right: 0.85rem;
+ }

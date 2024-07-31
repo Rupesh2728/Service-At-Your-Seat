@@ -1,0 +1,40 @@
+input{
+ margin-right:0.5rem;
+}
+
+.inputfield{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+}
+
+.inputfield label{
+    font-size: 13px;
+    font-weight: 500;
+    color: #fff;
+}
+
+
+@media (max-width: 828px) {
+    .inputfield{ 
+        width: 40%;
+    } 
+}
+
+@media (max-width: 750x) {
+    .inputfield{
+        width: calc(100% / 2 - 15px);
+    }
+}
+
+@media (max-width: 550x) {
+    .inputfield{
+        width: 100%;
+    }
+}
+
+@media (max-width: 400px) {
+    .inputfield{
+         width: 100%;
+     }
+} 

@@ -1,0 +1,32 @@
+.mainnavbar
+{   background-color: #181616;
+    width: 49vw;
+    height: 9vh;
+    margin-top:2.5vw;
+    margin-bottom: 1.5vw;
+    border-radius: 8rem;
+    display: flex;
+    justify-content: space-between;
+    border:1px solid goldenrod;
+}
+
+.navtext
+{
+    color: gold;  
+    font-weight: 400;
+    font-family: "Open Sans", sans-serif;
+}
+
+@media screen and (max-width:1400px) {
+    .mainnavbar
+    {
+      width: 50vw;
+    }
+}  
+
+@media screen and (max-width:1260px) {
+  .mainnavbar
+  {
+    width: 51vw;
+  } 
+}

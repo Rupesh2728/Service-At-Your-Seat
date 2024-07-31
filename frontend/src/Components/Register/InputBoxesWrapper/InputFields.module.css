@@ -1,0 +1,20 @@
+.fields{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 1020px) {
+    .fields
+    {
+        margin-top: 1vw;
+    }
+}
+
+@media (max-width: 550px){
+    .fields
+    {
+        margin-top:4vw;
+    }
+}

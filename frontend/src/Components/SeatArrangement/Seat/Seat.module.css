@@ -1,0 +1,11 @@
+.seats {
+    background-color: white;
+    height: 26px;
+    width: 32px;
+    margin: 3px;
+    font-size: 0.9rem;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  
+  }
+  

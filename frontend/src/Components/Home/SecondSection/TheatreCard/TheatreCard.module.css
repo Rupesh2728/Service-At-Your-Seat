@@ -1,0 +1,260 @@
+
+  .card {
+    background-image: url('https://filmfare.wwmindia.com/content/2021/jun/theatre31623998769.jpg');
+    background-size:cover;
+    width: 14.2rem;
+    height: 18rem;
+    border-radius: 0.6em;
+    margin: 1em;
+    padding: 0;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all ease 200ms;
+  }
+  
+   .card:hover {
+    transform: scale(1.05);
+  } 
+  
+  .theatreimg {
+    width: 100%;
+    height: 100%;
+  }
+  
+    .title {
+    color: gold;
+    
+    margin-top: -0.2em;
+    line-height: 1.4;
+    font-size: 1.3em;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    transition: all ease-in 100ms;
+  }
+  
+  /* .card p {
+    color: white;
+  } */
+  
+  .card h5 {
+    color: white;
+    font-weight: 700;
+    font-size: 0.7em;
+    letter-spacing: 0.04em;
+    margin: 1.4em 0 0 0;
+    text-transform: uppercase;
+    
+  }
+
+  .specifications
+  {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1vw;
+  }
+
+  .type
+  {
+     margin-right:1vw;
+  }
+  
+  
+  .cardbody {
+    padding: 1.2em;
+    width: 15em;
+    color: white;
+  }
+
+
+
+  @media screen  and (max-width:1144px){
+    .card
+    {
+      width: 13rem;
+      margin: 0.5em;
+      height: 17rem;
+    }
+
+    .cardbody {
+      padding: 1em;
+      width: 14em;
+      color: white;
+    }
+
+    .title
+    {
+      font-size: 1.2em;
+    }
+
+    .specifications
+    {
+      font-size: 1.3vw;
+    }
+
+    .description
+    {
+      font-size: 1.4vw;
+    }
+}
+
+
+@media screen  and (max-width:991px){
+  .card
+  {
+    width: 12.8rem;
+    margin: 0.5em;
+    height: 17rem;
+  }
+
+  .cardbody {
+    padding: 1em;
+    width: 13em;
+    color: white;
+  }
+
+  .title
+  {
+    font-size: 1.2em;
+  }
+
+  .description
+    {
+      font-size: 1.7vw;
+    }
+}
+
+@media screen  and (max-width:800px){
+  .description
+  {
+    font-size: 1.8vw;
+  }
+}
+
+
+@media screen  and (max-width:767px){
+  .card
+  {
+    width: 13rem;
+    margin: 0.5em;
+    height: 17rem;
+  }
+
+  .cardbody {
+    padding: 1em;
+    width: 13em;
+    color: white;
+  }
+
+  .title
+  {
+    font-size: 1.2em;
+  }
+
+  .description
+    {
+      font-size: 2.1vw;
+    }
+
+    .specifications
+    {
+       font-size: 2vw;
+    }
+}
+
+
+@media screen  and (max-width:576px){
+  .card
+  {
+    width: 12.5rem;
+    margin: 0.5em;
+    height: 16.5rem;
+  }
+
+  .cardbody {
+    padding: 1em;
+    width: 12.5em;
+    color: white;
+  }
+
+  .title
+  {
+    font-size: 1.2em;
+  }
+
+  .description
+    {
+      font-size: 2.8vw;
+    }
+
+    .specifications
+    {
+       font-size: 2.3vw;
+    }
+}
+
+
+@media screen  and (max-width:450px){
+  .card
+  {
+    width: 11rem;
+    margin: 0.5em;
+    height: 15rem;
+  }
+
+  .cardbody {
+    padding: 1em;
+    width: 12em;
+    color: white;
+  }
+
+  .title
+  {
+    font-size: 1em;
+  }
+
+  .description
+    {
+      font-size: 3vw;
+    }
+
+    .specifications
+    {
+       font-size: 2.8vw;
+    }
+}
+
+@media screen  and (max-width:400px){
+  .card
+  {
+    width: 8rem;
+    margin: 1em;
+    height: 12.5rem;
+    margin: auto;
+  }
+
+  .cardbody {
+    padding: 1em;
+    width: 8rem;
+    color: white;
+  }
+
+  .title
+  {
+    font-size: 0.8em;
+  }
+
+  .description
+    {
+      font-size: 3vw;
+    }
+
+    .specifications
+    {
+       font-size: 3vw;
+    }
+
+    .card h5
+    {
+      font-size: 2vw;
+    }
+}

@@ -1,0 +1,12 @@
+.sidenavbar
+{
+    position: absolute;
+}
+
+
+.mobilenavcontent
+{
+    display: flex;
+    flex-direction: column;  
+    width: 5%;
+}

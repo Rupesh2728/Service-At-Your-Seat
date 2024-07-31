@@ -1,0 +1,165 @@
+body
+{
+   background-color: black !important;
+}
+
+.profile_img{
+    text-align: center;
+    color: #fff;
+}
+
+.profile_img .file {
+    position: relative;
+    overflow: hidden;
+    margin-top: -14%;
+    width: 60%;
+    border: none;
+    border-radius: 0;
+    font-size: 15px;
+    background: #212529b8;
+}
+
+.file:hover
+{
+    cursor: pointer;
+}
+
+ .input {
+    position: absolute;
+    opacity: 0;
+    right: 0;
+    top: 0;
+}
+
+.profile_head h5{
+    color: #daa520;
+    width: 100%;
+}
+
+
+
+.name
+{
+    text-transform: uppercase;
+    margin-top: 0.8rem;
+    font-weight: 500;
+    font-size: 1.4rem;
+}
+
+.nav_tabs{
+    margin-bottom:5%;
+}
+
+
+.profile_edit_btn{
+    border: none;
+    border-radius: 1rem;
+    width: 6rem;
+    padding: 4%;
+    font-weight: 600;
+    background-color:#daa520 !important;
+    color: #212f1f;
+    cursor: pointer;
+}
+
+.profile_edit_btn:hover{
+    background-color: lightgreen !important;
+    color: black;
+}
+
+.profile_work{
+    padding: 14%;
+    margin-top: 0.5rem;
+}
+
+.profile_work p{
+    font-size: 12px;
+    color: #daa520;
+    font-weight: 600;
+    margin-top: 10%;
+}
+.profile_work a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    font-size: 14px;
+    margin-top: 2rem;
+}
+
+.emp_profile{
+    padding: 3%;
+    border-radius: 0.5rem;
+    background: #212f1f;
+    width: 77%;
+    margin: auto;
+    margin-top: 3rem;
+}
+
+.profilepic
+{
+   width: 10rem;
+   height:14rem;
+   border-radius: 8px;
+   margin-left:1rem
+}
+
+
+.twitterlink:hover,.contactuslink:hover,.aboutuslink:hover{
+    text-decoration:none;
+}
+
+.youtubelink:hover
+{
+    color: red;
+    text-decoration: none;
+}
+
+.fblink:hover
+{
+    color: blueviolet;
+    text-decoration: none;
+}
+
+.instalink:hover
+{
+    color:purple;
+    text-decoration: none;
+}
+
+.profile_rating{
+    font-size: 13px;
+    color: #fff;
+    margin-top: 1.8rem;
+    display: flex;
+    
+}
+.urefnum{
+    color: #495057;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.back_home{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-start;
+    background-color: #212f1f;
+    margin-top: 5rem;
+    
+  }
+ 
+  .back_home a button{
+    padding: 4px;
+    background-color: #daa520;
+    color: #fff;
+    border-radius: 4px;
+    transition: .5s ease;
+  }
+  
+  .back_home a button:hover{
+    background-color: red;
+    color: #fff;
+    transform: scale(1.2);
+  }

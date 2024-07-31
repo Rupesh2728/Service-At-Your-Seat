@@ -1,0 +1,69 @@
+.value {
+    font-size: 3vw;
+    font-weight: 700;
+    display: block;
+    color: #49b5e7;
+    font-family: "Dosis", sans-serif;
+  }
+
+.name {
+    padding: 0;
+    margin: 0 0 20px 0;
+    font-size: 1.2vw;
+    color: #444444;
+  }
+
+  @media (max-width: 1180px) {
+    .value {
+      font-size: 3.3vw;
+    }
+
+    .name {
+        font-size: 1.4vw;
+      }
+  
+}
+
+
+@media (max-width: 990px) {
+    .value {
+      font-size: 4vw;
+    }
+
+    .name {
+        font-size: 1.8vw;
+      }
+}
+
+@media (max-width: 767px) {
+    .value {
+      font-size: 4.3vw;
+    }
+
+    .name {
+        font-size: 2.2vw;
+      }
+  
+}
+
+
+@media (max-width: 567px) {
+    .value {
+      font-size: 5.5vw;
+    }
+
+    .name {
+        font-size: 2.5vw;
+      }
+}
+
+@media (max-width: 400px) {
+    .value {
+      font-size: 7vw;
+    }
+
+    .name {
+        font-size: 3vw;
+      }
+  
+}

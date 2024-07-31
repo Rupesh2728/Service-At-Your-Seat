@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
+
+html{
+    height: 100%;
+}
+    
+body{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Open Sans', sans-serif;
+        height: 100%;
+        background-color: black !important;
+    }
+
+.food_items{
+    overflow: auto;
+    height: calc(100vh - 86px);
+}
+
+.biryani,.paneer,.chicken,.vegetable,.chinese,.south_indian{
+    margin-top: 40px;   
+}
+
+.category_name,.item_menu{
+    margin: 10px;
+    font-size: 35px;   
+    color: coral;
+    font-family: 'Aclonica', sans-serif;
+}
+
+.item_card
+{
+    width: 210px;
+    height: 280px;
+    padding: 10px;
+    margin: 10px;
+    display: inline-block;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s all step-end;
+    z-index: 1;
+    /* border: 2px red solid; */
+    background-color: #221f1f;
+}
+
+.item_card img{
+    width:100%;
+    height: 10rem;
+}
+
+.foodinfo
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.item_name,.item_price
+{
+    color: white;
+}
+
+.item_name{
+    margin: 5px 0;
+    font-weight: 600;
+    color: white;
+    font-size: 17px;
+}
+
+.item_price{
+
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    margin-top:0.3rem;
+}
+
+.item_price span{
+    padding-left:0.2rem;
+}
+
+.card_top
+{
+    display: flex;
+    justify-content: space-between;
+    margin-top:2rem;
+
+}
+
+.card_top span{
+    margin-left:0.25rem;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: black;
+}
+
+.add_box label{
+    font-size: 20px;
+     color: white;
+     font-weight: 600;
+}
+
+.add_box
+{
+    margin-left:1rem;
+    cursor: pointer !important;
+}
+
+.ticketid
+{ 
+    background-color: #221f1f;
+    width:8rem;
+    height: 2.5rem;
+    color: white;
+    border: 0;
+    border-radius: 5px;
+    font-size: 17px;
+}
+
+.ticketid option{
+    color: white;
+    font-size: 15px;
+}
+
+
+
+.cart_page{
+    background: white;
+    /* margin: 40px 10px; */
+    position: relative;
+   display: block;   
+   font-weight: 400 !important;
+}
+
+ .table{
+    width: 100%;
+    margin-top: 18px;
+    text-align: center;
+}
+.td{
+    font-size: 25px;
+    text-align: center;
+}
+
+.tr{
+    text-align: center;
+}
+
+.thead 
+{
+    width:100%;
+}
+
+.htd{
+    /* padding: 10px 0; */
+    font-size: 23px;
+    font-weight: 100;
+    color: black !important;
+    align-items: center;
+    text-align: center;
+}
+
+.td{
+   color: #221f1f !important;
+   font-size: 18px;
+   font-weight: 100;
+   align-items: center;
+   text-align: center;
+}
+.cart_page table tbody button{
+    outline: none;
+    border: none;
+    font-size: 16px;
+    background: none;
+    background: lightcoral;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+    margin: 0 5px;
+}
+.cart_page table tbody img{
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    border : 2px solid #221f1f;
+}
+
+.cart{
+    background: whitesmoke;
+    overflow-y: scroll;
+    margin-top:3rem;
+}
+
+.checkout{
+    /* margin: 40px auto; */
+    border-radius: 5px;
+    background: white;
+    display: block;
+    /* padding: 10px 20px; */
+}
+
+.numtotalitem,.numtotalprice
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.total_price,.total_item{
+    font-size: 25px;
+    color: indianred;
+}
+
+.totalitemnum,.totalpricenum
+{
+    font-size : 22px;
+}
+
+.cart_btn{
+    outline: none;
+    border: none;
+    background: crimson;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 20px;
+    font-size: 18px;
+    text-transform: uppercase;
+    bottom: 30px;
+    margin: 15px 0;
+    cursor: pointer;
+    
+}
+
+.cart_title{
+    font-size: 35px;
+    margin: 0;
+    color: gold;
+}
+
+
+
+

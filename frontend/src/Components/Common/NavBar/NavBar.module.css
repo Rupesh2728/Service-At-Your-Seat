@@ -1,0 +1,51 @@
+@media screen  and (min-width:1145px){
+    .laptopNavBar
+    {
+        display: block;
+    }
+
+    .mobileNavBar
+    {
+        display: none;
+    }
+
+    .slidenavbar
+    {
+        display: none;
+    }
+}
+
+@media screen  and (min-width:746px) and (max-width:1145px){
+    .laptopNavBar
+    {
+        display: none;
+    }
+
+    .mobileNavBar
+    {
+        display: block;
+    }
+
+    .slidenavbar
+    {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width:745px){
+    .laptopNavBar
+    {
+        display: none;
+    }
+
+    .mobileNavBar
+    {
+        display: none;
+    }
+
+    .slidenavbar
+    {
+        display: block;
+    }
+}

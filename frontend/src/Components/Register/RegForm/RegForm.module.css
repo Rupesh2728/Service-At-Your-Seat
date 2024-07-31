@@ -1,0 +1,45 @@
+.regForm{
+    position: relative;
+    min-height: 650px;
+    overflow: hidden;
+    width:80%;
+    margin-top: 1.5vw;
+    margin-left: 10vw;
+}
+
+.endingdiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+@media (max-width: 1156px) {
+    .regForm{
+        width:80%;
+        margin-left: 9vw;
+    } 
+}
+
+@media (max-width: 1020px) {
+    .regForm{
+        width:100%;
+        margin-left: 0vw;
+    } 
+}
+
+@media (max-width: 828px) {  
+     .endingdiv
+     {
+         display: flex;
+         justify-content: center;
+     }
+ }
+
+ @media (max-width: 750px) {
+    .regForm{
+        overflow-y: scroll;
+    }
+    .regForm::-webkit-scrollbar{
+       display: none;
+    }
+}

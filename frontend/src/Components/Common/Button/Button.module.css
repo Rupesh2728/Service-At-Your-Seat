@@ -1,0 +1,23 @@
+.btn
+{
+    align-items: center;
+    justify-content: center;
+    height: 7vh;
+    /* max-width: 200px; */
+    width: 100%;
+    border: none;
+    outline: none;
+    color: #fff;
+    border-radius: 5px;
+    /* margin: 25px 0; */
+    background-color: #4070f4;
+    cursor: pointer;
+    font-size: 16px;
+     font-weight: 500;
+}
+
+.btn:hover
+{
+    background-color:green !important;
+    color:white
+}

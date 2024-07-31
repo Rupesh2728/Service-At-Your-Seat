@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+.title {
+    color: #ffffff;
+    font-size: 1.5rem;
+    position: relative;
+    font-weight: 700;
+    margin-left: 0.5vw;
+    /* height: 4.7rem; */
+}
+
+.movie_infos {
+    display: flex;
+    align-items: center;
+    /* flex-wrap: wrap;
+    margin-top: calc(var(30px) / 2); */
+}
+
+.movie_info {
+    display: flex;
+    align-items: center;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.movie_info span {
+    margin-left: 5px;
+}
+
+.movie_info ~ .movie_info {
+    margin-left: 5px;
+}
+
+.bookbtn
+{
+     justify-content: center;
+     background-color: red !important;
+     height: 2.5vw;
+     width: 100%;
+     border: none;
+     margin-left: 4px;
+     margin-right: 4px;
+}
+
+.bookbtn:hover
+{
+  background-color: rgb(205, 32, 32);
+}
+
+.btnname
+{
+    font-size: 1.3vw;
+    text-transform: uppercase;
+    font-weight: 700;
+     color: white;
+     padding: auto;
+}
+
+
+.card {
+    background-size:cover;
+    width: 17rem;
+    height: 24rem;
+    border-radius: 0.1em;
+    margin: 1em;
+    padding: 0;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all ease 200ms;
+    position: relative;
+    display: block;
+  }
+  
+   .card:hover {
+    transform: scale(1.05);
+  } 
+
+  
+  .cardbody {
+    width: 17rem;
+    color: white;
+   margin-top: 15.5rem;
+   position: absolute;
+   bottom: 0.5vw;
+  }
+
+
+  @media screen  and (max-width:1400px){
+    .card
+    {
+      margin: 0.5em;
+       width: 16.5rem;
+       height: 22rem;
+    }
+
+    .cardbody 
+    {
+      width: 16.5em;
+      color: white;
+      bottom: 0.5vw;
+    }
+
+    .title
+    {
+      font-size: 1.2em;
+    }
+
+
+    .description
+    {
+      font-size: 1.4vw;
+    }
+
+    .bookbtn
+    {
+     height: 3vw;
+     width: 100%;
+
+    }
+
+    .btnname
+    {
+      padding-top:3px;
+    }
+}
+
+  @media screen  and (max-width:1144px){
+    .card
+    {
+        margin: 0.5em;
+       width: 14.8rem;
+       height: 21rem;
+    }
+
+    .cardbody 
+    {
+      width: 14.8rem;
+      color: white;
+      bottom: 0.5vw;
+    }
+
+    .title
+    {
+      font-size: 1.3em;
+    }
+
+
+    .description
+    {
+      font-size: 1.5vw;
+    }
+
+    .bookbtn
+    {
+     height: 3vw;
+     width: 100%;
+    }
+
+}
+
+
+@media screen  and (max-width:991px){
+  .card
+  {
+      margin: 0.5em;
+     width: 14rem;
+     height: 17.5rem;
+  }
+
+  .cardbody 
+  {
+    width: 14rem;
+    color: white;
+    bottom: 0.5vw;
+  }
+
+  .title
+  {
+    font-size: 1.4em;
+  }
+
+
+  .description
+  {
+    font-size: 1.8vw;
+  }
+
+  .bookbtn
+  {
+   height: 3.2vw;
+   width: 100%;
+  }
+
+  .btnname
+  { 
+    font-size: 1.4vw;
+    margin: auto;
+  }
+}
+
+@media screen  and (max-width:800px){
+  .description
+  {
+    font-size: 1.8vw;
+  }
+}
+
+
+@media screen  and (max-width:767px){
+  .card
+  {
+      margin: 0.5em;
+      width: 16.5rem;
+      height: 20.5rem;
+  }
+
+  .cardbody 
+  {
+    width: 16.5rem;
+    color: white;
+    bottom: 0.5vw;
+  }
+
+  .title
+  {
+    font-size: 1.4em;
+  }
+
+
+  .description
+  {
+    font-size: 1.8vw;
+  }
+
+  .bookbtn
+  {
+   justify-content: center;
+   background-color: red;
+   height: 5vw;
+   width: 100%;
+  }
+
+  .btnname
+  { 
+    font-size: 2.5vw;
+    margin: auto;
+  }
+}
+
+
+@media screen  and (max-width:576px){
+  .card
+  {
+      margin: 0.5em;
+      width: 13rem;
+      height: 17rem;
+  }
+
+  .cardbody 
+  {
+    width: 13rem;
+    color: white;
+    bottom: 0.5vw;
+  }
+
+  .title
+  {
+    font-size: 1.4em;
+  }
+
+
+  .description
+  {
+    font-size: 1.8vw;
+  }
+
+  .bookbtn
+  {
+   height: 2rem;
+   width: 100%;
+  }
+
+  .btnname
+  { 
+    font-size: 3vw;
+    margin: auto;
+  }
+}
+
+
+@media screen  and (max-width:450px){
+  .card
+  {
+      width: 11rem;
+      height: 14rem;
+  }
+
+  .cardbody 
+  {
+    width: 11rem;
+    color: white;
+    bottom: 0.5vw;
+  }
+
+  .title
+  {
+    font-size: 1.2em;
+  }
+
+
+  .description
+  {
+    font-size: 1.8vw;
+  }
+
+  .bookbtn
+  {
+    height: 1.7rem;
+  }
+
+
+}
+
+@media screen  and (max-width:400px){
+  .card
+  {
+    width: 8rem;
+    margin: auto;
+    height: 11rem;
+  }
+
+  .cardbody 
+  {
+    width: 8rem;
+    color: white;
+    bottom: 0.5vw;
+  }
+
+  .movie_info
+  {
+    font-size: 0.5rem;
+  }
+
+  .title
+  {
+    font-size: 1em;
+  }
+
+
+  .description
+  {
+    font-size: 1vw;
+  }
+}
+

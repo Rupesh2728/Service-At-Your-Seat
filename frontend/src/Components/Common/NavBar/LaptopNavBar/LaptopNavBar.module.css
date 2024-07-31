@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+  
+    
+    .laptopnavbar
+    {     font-family: 'Poppins', sans-serif !important;
+         background-color: black;
+        position: relative;
+    }
+
+    .calenderdiv
+    {
+    font-weight: 400;
+    font-family: "Open Sans", sans-serif;
+    margin-top: 3vw;
+    margin-left: 1.5vw;
+    font-size: 1.5vw;
+    height: 1rem;
+   }
+
+   .calender
+   {
+    width:1.2rem;
+    height: 1rem;
+    background-color: indianred;
+    border: none;
+    border-radius: 5px;
+   }
+     
+    .sayslogo
+    {  
+        height: 18vh;
+        width:18vw;
+        margin-top:0.3vw;
+        margin-left:1vw;
+    }
+
+    .locdiv
+    {
+        margin-top: 2.8vw;
+        margin-left: 0;
+        width: 85%;   
+    }
+
+    @media screen and (max-width:1300px) {
+        .locdiv
+    {
+        margin-top: 3vw;
+        width: 100%;  
+    }
+    }
+
+     
+
+

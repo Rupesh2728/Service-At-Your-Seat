@@ -1,0 +1,25 @@
+.mainsearchdiv
+{
+    margin-top: 2rem;
+}
+
+@media screen  and (max-width:767px){
+    .mainsearchdiv
+    {
+        margin-top: 1rem;
+    }
+}
+
+@media screen  and (max-width:450px){
+    .mainsearchdiv
+    {
+        margin-top: 0.6rem;
+    }
+}
+
+@media screen  and (max-width:400px){
+    .mainsearchdiv
+    {
+        margin-top: 0.3rem;
+    }
+}

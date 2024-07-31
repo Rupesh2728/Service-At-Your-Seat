@@ -1,0 +1,52 @@
+.errormsg
+{
+    display: block;
+    font-size: 0.9vw;
+    font-weight: 600;
+    color: red;
+}
+
+@media (max-width: 1156px) {
+    .errormsg
+    {
+        font-size: 1vw;
+    }  
+}
+
+@media (max-width: 1020px) {
+    .errormsg
+    {
+        font-size: 1.1vw;
+    }
+}
+
+@media (max-width: 828px) {
+    .errormsg
+    {
+        font-size: 1.6vw;
+    }
+}
+
+@media (max-width: 750px) {
+    
+    .errormsg
+    {
+        font-size: 1.7vw;
+    }
+}
+
+@media (max-width: 550px) {
+    
+    .errormsg
+    {
+        font-size: 2.5vw;
+    }
+
+}
+
+@media (max-width: 400px) {   
+    .errormsg
+    {
+        font-size: 3.3vw;
+    }
+}

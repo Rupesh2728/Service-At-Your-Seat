@@ -1,0 +1,45 @@
+body{
+    background-color: black !important;
+}
+
+.line,.fline
+{
+        margin: 0;
+       border:solid gold 0.5px;
+         width: 80%;
+        background-color: black !important;
+        margin: auto;
+        display: none;
+        margin-left: 2rem;
+}
+
+
+@media screen and (max-width:1145px) {
+.laptopfirstsection
+{
+    display: none;
+}
+} 
+
+
+    @media screen and (max-width:576px) {
+        .line,.fline
+        {
+            display: block;
+            margin-left: 3.3rem;
+        }
+
+        .fline
+        {
+            margin-left: 3.5rem;
+        }
+    
+        } 
+
+        @media screen and (max-width:400px) {
+            .line,.fline
+            {
+                display: block;
+                margin-left: 2.4rem;
+            } 
+            } 

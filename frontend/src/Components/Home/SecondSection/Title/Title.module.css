@@ -1,0 +1,48 @@
+.title
+{
+    display: flex;
+    justify-content: center;
+}
+
+.title p
+{
+    font-size: 2vw;
+    color: gold;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+@media screen  and (max-width:991px){
+    .title p {
+        font-size: 2.3vw
+    }
+}
+
+@media screen  and (max-width:767px){
+    .title p {
+        font-size: 2.5vw
+    }
+}
+
+@media screen  and (max-width:576px){
+    .title p {
+        font-size: 3.2vw;
+        margin-left: 6vw;
+    }
+}
+
+@media screen  and (max-width:450px){
+    .title p {
+        font-size: 3.5vw;
+        margin-left: 1vw;
+    }
+}
+
+@media screen  and (max-width:400px){
+
+    .title p {
+        font-size: 4vw;
+        width: 85%;
+        vertical-align: middle;
+    }
+}

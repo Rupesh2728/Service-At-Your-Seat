@@ -1,0 +1,19 @@
+.logodiv
+{
+    margin-top: 3vw;
+}
+
+@media screen and (max-width:767px) {
+   
+    .logodiv
+    {
+        margin-top: 2vw;
+    }
+}
+
+@media screen and (max-width:449px) {
+    .logodiv
+   {
+    margin-top: 2vw;
+   }
+}

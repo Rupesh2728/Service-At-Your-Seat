@@ -1,0 +1,7 @@
+.alphabet
+{
+  border:2px solid black;
+  width:1.5rem;
+  display: flex;
+  justify-content: center;
+}

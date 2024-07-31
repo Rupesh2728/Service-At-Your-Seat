@@ -1,0 +1,56 @@
+.slogan
+{
+    display: flex;
+    justify-content: center;
+    margin-top: 3vw;
+    font-size: 2.2vw;
+    color: whitesmoke;
+    display: none;
+    width:60%;
+    text-align-last: center;
+    color: wheat;
+}
+
+
+@media screen and (max-width:746px) {
+    .slogan
+    {
+        display: block;
+        margin: 20vw;
+        margin-top: 6vw;
+        margin-bottom: 2vw;
+    }
+}
+
+@media screen and (max-width:546px) {
+    .slogan
+    {
+        margin: 16vw;
+        margin-top: 8vw;
+        margin-bottom: 2vw;
+        font-size: 3vw;
+        width:75%;
+    }
+}
+
+@media screen and (max-width:450px) {
+    .slogan
+    {
+       
+        margin-top: 8vw;
+        margin-bottom: 0vw;
+        font-size: 3vw;
+       
+    }
+}
+
+@media screen and (max-width:400px) {
+    .slogan
+    {
+        margin: 16vw;
+        margin-top: 8vw;
+        margin-bottom: 0vw;
+        font-size: 4vw;
+        width:80%;
+    }
+}

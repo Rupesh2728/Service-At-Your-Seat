@@ -1,0 +1,43 @@
+.theatresearch
+{  
+   background-color: black;
+   padding-bottom: 6rem;
+   padding-top: 3rem;
+}
+
+@media screen  and (max-width:991px){
+    .theatresearch
+    {
+        padding-top: 6rem;
+    }
+}
+
+@media screen  and (max-width:767px){
+    .theatresearch
+    {
+        padding-top: 1rem;
+    }
+}
+
+@media screen  and (max-width:576px){
+    .theatresearch
+    {
+        padding-top: 1rem;
+    }
+
+}
+
+@media screen  and (max-width:450px){
+    .theatresearch
+    {
+        padding-top: 5rem;
+    }
+}
+
+@media screen  and (max-width:400px){
+    .theatresearch
+    {
+        padding-top: 2rem;
+        padding-bottom: 4rem;
+    }
+}

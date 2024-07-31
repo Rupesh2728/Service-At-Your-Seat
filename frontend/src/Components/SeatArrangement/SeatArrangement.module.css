@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+
+
+.body { 
+  color: #fff;
+  font-family: "Lato", sans-serif !important;
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+   font-family: 'Roboto Slab', serif;
+}
+
+.back_to_home{
+  
+  position: absolute;
+  top: 2%;
+  right: 3%;
+  
+   
+ }
+ .back_to_home a{
+   text-decoration: none;
+ 
+ }
+ .back_to_home a button{
+   padding: 4px;
+   margin-top: 5px;
+   background-color: #0d6efd;
+   color: #fff;
+   border-radius: 4px;
+   
+   transition: .5s ease;
+ }
+
+ .back_to_home a button:hover{
+   background-color: red;
+   color: #fff;
+   transform: scale(1.2);
+ }
+
+ .main_body{ 
+     position: relative;
+     width: 100%;
+     min-height: 100vh;
+     display: flex;
+     flex-direction: row;
+    }
+
+.side_image 
+{
+  width: 30%;
+}
+
+.side_image img
+{
+ width: 100%;
+ height: 100%;
+}
+
+
+.display .seats:not(.SoldOut):hover {
+    cursor: default;
+    transform: scale(1);
+  }
+  
+  .display {
+    position: relative;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    color: #777;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  .display li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 10px;
+  }
+  .display li small {
+    color: goldenrod;
+    margin-left: 2px;
+  }
+
+  .seats {
+    background-color: white;
+    height: 26px;
+    width: 32px;
+    margin: 3px;
+    font-size: 0.9rem;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  
+  }
+  
+  
+  .seats p{
+    margin:auto;
+    margin-left: 0.4rem;
+  }
+  
+  .seats.Selected {
+    background-color: green !important;
+  }
+  
+  .showcaseselected
+  {
+    background-color: green;
+  }
+  
+  .seats.SoldOut {
+    background-color: red;
+  }
+  
+  .seats.premium
+  {
+    background-color: blue;
+  }
+  
+  .seats.disabled
+  {
+    color: black !important;
+  }
+  
+  
+  .seats.emptyspace
+  {
+    background-color: transparent;
+    color:transparent;
+  }
+   
+  .seats:not(.SoldOut):hover {
+    cursor: pointer;
+    transform: scale(1.2);
+  }
+
+  .movie_title {
+    position: relative;
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  .proceed_button{
+    text-align: center;
+  }
+
+.text{
+    margin: 15px 0;
+}
+
+.text span{
+    color: rgb(158, 248, 158);
+}
+      

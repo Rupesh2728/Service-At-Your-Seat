@@ -1,0 +1,49 @@
+.sub_title
+{
+    display: flex;
+    justify-content: center;
+}
+
+.sub_title p
+{
+    font-size: 1.5vw;
+    color: white;
+    padding-top: 0;
+    top:0;
+}
+
+@media screen  and (max-width:991px){
+    .sub_title p
+    {
+        font-size: 1.8vw;
+    }
+}
+
+@media screen  and (max-width:767px){
+    .sub_title p
+    {
+        font-size: 2vw;
+    }
+}
+
+@media screen  and (max-width:576px){
+    .sub_title p
+    {
+        font-size: 2.5vw;
+    }
+}
+
+@media screen  and (max-width:450px){
+    .sub_title p
+    {
+        font-size: 3vw;
+    }
+}
+
+@media screen  and (max-width:400px){
+    .sub_title p
+    {
+        font-size: 3.8vw;
+    }
+}
+

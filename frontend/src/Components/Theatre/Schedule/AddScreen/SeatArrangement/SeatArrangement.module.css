@@ -1,0 +1,8 @@
+.screenview
+{
+  position: -webkit-sticky;
+  position: sticky;
+   bottom: 0;
+ background-color: antiquewhite;
+ margin-top: 1rem;
+}

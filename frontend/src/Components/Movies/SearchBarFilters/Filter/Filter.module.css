@@ -1,0 +1,121 @@
+.select
+{
+    width:7vw;
+    background-color: rgb(32, 12, 12) !important;
+    color: white;
+    border-radius: 6px;
+    font-size: 1.3vw;
+    height: 2.2vw;
+    border-radius: 6px;
+    margin-left: 0.5rem;
+}
+
+.label
+{
+   color: red;
+   font-size: 1.35vw;
+}
+
+.option
+{
+  border: none;
+  font-size: 1.2vw;
+  border-radius: 6px;
+}
+
+@media screen and (max-width:1145px){
+ .label
+ {
+  font-size: 1.7vw;
+ }
+
+ .select
+ {
+  font-size: 1.5vw;
+  width:7.5vw;
+  height: 2.5vw;
+ }
+
+ .option
+ {
+  font-size: 1.3vw;
+ }
+}
+
+
+@media screen and (max-width:900px){
+  .label
+  {
+   font-size: 2vw;
+  }
+ 
+  .select
+  {
+   font-size: 1.8vw;
+   width:8.5vw;
+   height: 3vw;
+  }
+ 
+  .option
+  {
+   font-size: 1.6vw;
+  }
+ }
+
+
+ @media screen and (max-width:746px){
+  .label
+  {
+   font-size: 2.2vw;
+  }
+ 
+  .select
+  {
+   font-size: 2vw;
+   width:9.5vw;
+   height: 3.5vw;
+  }
+ 
+  .option
+  {
+   font-size: 1.8vw;
+  }
+ }
+
+ @media screen and (max-width:546px){
+  .label
+  {
+   font-size: 3vw;
+  }
+ 
+  .select
+  {
+   font-size: 2.5vw;
+   width:10.5vw;
+   height: 4vw;
+  }
+ 
+  .option
+  {
+   font-size: 2.2vw;
+  }
+ }
+
+ @media screen and (max-width:400px){
+  .label
+  {
+   font-size: 3.8vw;
+  }
+ 
+  .select
+  {
+   font-size: 3vw;
+   width:14vw;
+   height: 7vw;
+  }
+ 
+  .option
+  {
+   font-size: 3vw;
+  }
+ }

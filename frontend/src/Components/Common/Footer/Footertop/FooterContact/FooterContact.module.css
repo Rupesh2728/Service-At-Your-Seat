@@ -1,0 +1,50 @@
+.footercontact {
+    margin-bottom: 30px;
+  }
+  
+  .footercontact h3{
+    font-size: 22px;
+    margin: 0 0 30px 0;
+    padding: 2px 0 2px 0;
+    line-height: 1;
+    font-weight: 700;
+    color: white;
+  }
+  
+   .footercontact p {
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 0;
+    font-family: "Lato", sans-serif;
+    color: #777777;
+  }
+
+
+  @media screen and (max-width:500px) {
+     .footercontact h3{
+       font-size: 4vw;
+       margin-bottom: 4vw;
+       padding-top: 0vw;
+     }
+
+     .footercontact p{
+      font-size: 3vw;
+    }
+  }
+
+  @media screen and (max-width:400px) {
+    .footercontact h3{
+      font-size: 4.8vw;
+      padding-top: 0vw;
+      margin-bottom: 3.5vw;
+    }
+
+    .footercontact p{
+     font-size: 3.5vw;
+   }
+
+   .footercontact
+   {
+    margin-bottom: 25px;
+   }
+ }

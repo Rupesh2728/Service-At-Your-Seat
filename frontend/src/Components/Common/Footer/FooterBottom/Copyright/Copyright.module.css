@@ -1,0 +1,29 @@
+.copyright {
+    padding: 10px;
+    border-top: 1px solid var(--body-bg);
+    background-color: var(--box-bg);
+    text-align: center;
+    color:white;
+}
+
+.copyright {
+    float: left;
+    background-color: var(--box-bg);
+    width:100%;
+  }
+
+  @media (max-width: 575px) {
+    .copyright {
+        float: none;
+        text-align: center;
+        background-color: var(--box-bg);
+        font-size: 3vw;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .copyright {
+        font-size: 3.5vw;
+        }
+      }
+  

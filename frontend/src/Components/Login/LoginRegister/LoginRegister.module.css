@@ -1,0 +1,87 @@
+.loginregister {
+    font-size: 1.05vw;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 1.63vw;
+
+}
+
+.clientregister
+{
+    cursor: pointer;
+}
+
+.userlogin:hover
+{ 
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.loginregister p a {
+    color: #e4e4e4;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.loginregister p a:hover {
+    text-decoration: underline;
+}
+
+
+.login_success {
+    margin-top: 0.65vw;
+    color: red;
+    font-size: 1.4vw;
+}
+
+@media screen and (max-width:990px) {
+    .loginregister
+   {
+    font-size: 1.5vw;
+    margin-top: 1vw;
+   }
+
+   .userlogin
+   {  
+      font-size: 2vw;
+   }
+}
+
+@media screen and (max-width:560px) {
+    .loginregister
+    {
+     font-size: 2.8vw;
+     margin-top: 1vw;
+    }
+
+    .login_success {
+        margin-top: 0.5vw;
+        color: red;
+        font-size: 2.2vw;
+    }
+
+    .userlogin
+   {  
+      font-size: 2.8vw;
+   }
+}
+
+
+@media screen and (max-width:400px) {
+    .loginregister
+    {
+     font-size: 3.5vw;
+     margin-top: 1vw;
+    }
+
+    .login_success {
+        margin-top: 0.5vw;
+        color: red;
+        font-size: 3vw;
+    }
+
+    .userlogin
+   {  
+      font-size: 3.5vw;
+   }
+}

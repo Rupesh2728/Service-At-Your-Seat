@@ -1,0 +1,59 @@
+.heading
+{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    background-color: #221f1f;
+    width:70%;
+    margin: auto;
+    height: 4rem;
+    border-radius:7px;
+}
+
+.h4
+{
+   border: 3px solid red;
+   border-top:0;
+   border-left: 0;
+   border-right: 0;
+   margin: auto;
+   margin-left: 0.75rem;
+   font-size: 1.3rem;
+   font-weight: 600;
+}
+
+.headingrow
+{
+  border: 3px solid black;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+}
+
+.screentable
+{
+    color: white;
+    background-color: #221f1f;
+    width:60%;
+    margin: auto;
+}
+
+.schedulingheading
+{
+  display: flex;
+  justify-content: center;
+  margin-top:2rem;
+  letter-spacing: 6px;
+  color: white;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.showsdatatable
+{
+      color: white;
+    background-color: #221f1f;
+    width:90%;
+    
+
+}

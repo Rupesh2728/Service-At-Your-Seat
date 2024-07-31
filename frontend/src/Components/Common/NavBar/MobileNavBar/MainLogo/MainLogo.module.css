@@ -1,0 +1,43 @@
+.sayslogo
+    {  
+        height: 18vh;
+        width:18vw;
+        margin-top:0.3vw;
+        margin-left:1vw;
+    }
+
+    @media screen and (max-width:900px) {
+        .sayslogo
+        {
+            height: 8rem;
+            width:22vw;
+            margin-top:0.3vw;
+            margin-left:1vw;
+        }
+    }
+
+    @media screen and (max-width:746px) {
+        .sayslogo
+        {
+            height: 7rem;
+            width:24vw;
+        }
+    }
+
+    @media screen and (max-width:546px) {
+
+        .sayslogo
+        {
+        height: 6rem;
+         width:29vw;
+        }
+    }
+
+    @media screen and (max-width:450px) {
+
+        .sayslogo
+        {
+         height: 6rem;
+         width:38vw;
+        }
+    }

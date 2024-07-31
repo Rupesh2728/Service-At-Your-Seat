@@ -1,0 +1,22 @@
+.title
+{
+    display: flex;
+    justify-content: center;
+    padding-top: 5vw;
+    color: gold;
+}
+
+@media screen and (max-width:767px) {
+    .title
+    {
+        padding-top: 2vw;
+    }
+}
+
+@media screen and (max-width:449px) {
+
+    .title
+    {
+        padding-top: 5vw;
+    }
+}

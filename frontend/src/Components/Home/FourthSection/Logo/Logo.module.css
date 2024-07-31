@@ -1,0 +1,40 @@
+.logo
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background:black;
+    height: 120px;
+}
+
+.logo img {
+    height: 80%;
+    transition: 0.3s;
+  }
+  
+.logo:hover img {
+    filter: none;
+    transform: scale(1.2);
+  }
+
+  @media screen and (max-width:991px) {
+    .logo img{
+       width: 75%;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .logo img{
+       width: 70%;
+    }
+
+}
+
+@media screen and (max-width:449px) {
+    .logo img{
+       width: 70%;
+       height: 50%;
+    }
+
+}

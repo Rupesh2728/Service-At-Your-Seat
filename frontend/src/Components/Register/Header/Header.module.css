@@ -1,0 +1,26 @@
+.header{
+    position: relative;
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+   
+    border:3px solid #4070f4;
+    width:2rem;
+    height:2.3rem;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    margin-left: 10vw;
+} 
+
+@media (max-width: 1156px) {
+     .header{
+        margin-left: 9vw;
+    }
+}
+
+@media (max-width: 1020px) {
+    .header{
+        margin-left: 0vw;
+    }
+}

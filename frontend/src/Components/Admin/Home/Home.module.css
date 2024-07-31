@@ -1,0 +1,137 @@
+
+.websitereviews
+{ margin-top: 2rem;
+   width:100%; 
+}
+
+.websitereviews h4
+{
+    color: white;
+    border:4px solid red;
+    padding-left:0.5rem;
+    padding-bottom: 0.5rem;
+    border-top:0;
+    border-right:0;
+}
+
+.reviewtable
+{
+    background-color: #221f1f;
+    margin-top:1rem;
+    border-radius: 3px;
+}
+
+.table 
+  {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+ 
+  
+  .table th,td 
+  {
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .table th 
+  {
+    color: red;
+  }
+
+ .headingrow
+  {
+    border: 3px solid black;
+  }
+  
+  .table td 
+  {
+    color: #ffc107;
+    font-weight: bold;
+  }
+
+  .salesreport h2
+  {   color: white;
+      letter-spacing: 0.130em;
+       display: flex;
+       justify-content: center;
+       margin-top: 3rem; 
+       font-size: 2rem; 
+       font-weight: 600;
+  }
+
+  .weeklysales
+  {
+      width:65%;
+      background-color: #221f1f;
+      height:22rem;
+      border-radius: 10px;
+
+  }
+
+  .weeklysales h4
+  {
+      letter-spacing: 0.75rem;
+      display: flex;
+      justify-content: center;
+      margin-top:1rem;
+      font-size: 1.5rem;
+      font-weight: 600;
+  }
+
+  .reviewbox{
+    width:27rem;
+    box-shadow: 2px 2px 30px rgba(0,0,0,0.1);
+    background-color: #221f1f;
+    padding: 20px;
+    margin: 15px;
+    cursor: pointer;
+    border:0;
+    border-radius: 6px;
+}
+
+.box_top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile_img{
+    width:50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.profile_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.profile{
+    display: flex;
+    align-items: center;
+}
+
+.name_user{
+    display: flex;
+    flex-direction: column;
+}
+.name_user strong{
+   color: white;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+}
+.name_user span{
+    color: white;
+    font-size: 0.8rem;
+}
+
+.client_comment p{
+    font-size: 0.9rem;
+   color: white;
+}

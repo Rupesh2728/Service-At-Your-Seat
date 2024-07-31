@@ -1,0 +1,85 @@
+.firstseccontent
+{
+  padding-top: 2.5rem;
+}
+
+.booknowbtn{
+    font-weight: 500;
+    font-size: 1vw;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 8px 28px;
+    border-radius: 3px;
+    transition: 0.5s;
+    margin-top: 25px;
+    color: #fff;
+    background: #49b5e7 ;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  .booknowbtn:hover{
+    background-color: red;
+    color: white;
+  }
+
+
+@media screen and (max-width:991px) {
+    .firstseccontent
+    {
+       padding-top: 2.5rem;
+       margin-left: 9vw;
+    }
+  
+  .booknowbtn{
+    font-size: 1.2vw;
+}
+}
+
+
+@media screen and (max-width:767px) {
+    .firstseccontent
+    {
+       padding-top: 2rem;
+       margin-left: 6vw;
+    }
+
+  .booknowbtn{
+    font-size: 1.5vw;
+}
+}
+
+@media screen and (max-width:576px) { 
+    .firstseccontent
+    {
+       padding-top: 2rem;
+       margin-left: 10vw;
+    }
+
+  .booknowbtn{
+    font-size: 2vw;
+    margin-top: 1.8vw;
+}
+}
+
+
+@media screen and (max-width:450px) { 
+    .firstseccontent
+    {
+       padding-top: 2rem;
+       margin-left: 12vw;
+    }
+
+  .booknowbtn{
+    font-size: 2.3vw;
+    margin-top: 2vw;
+}
+}
+
+@media screen and (max-width:400px) {
+  .booknowbtn{
+    font-size: 3vw;
+    margin-top: 3vw;
+}
+}
+

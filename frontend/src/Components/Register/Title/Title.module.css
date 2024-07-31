@@ -1,0 +1,55 @@
+.title{
+    font-size: 1.2vw;
+    font-weight: 600;
+    color: yellowgreen;
+    margin-top: 1vw;
+}
+
+@media (max-width: 1156px) {
+    .title
+    {
+        font-size: 1.3vw;
+    }
+}
+
+@media (max-width: 1020px) {
+    .title
+    {
+        font-size: 1.5vw;
+    }
+}
+
+@media (max-width: 828px) {
+    .title
+    {
+        font-size: 2vw;
+    }
+}
+
+@media (max-width: 750px) {
+    .title
+    {
+        font-size: 2.2vw;
+    }
+}
+
+@media (max-width: 550px) {
+    .title
+    {
+        font-size: 3.5vw;
+    }
+
+    .title
+    {
+        font-size: 4.7vw;
+    }
+}
+
+@media (max-width: 400px) {
+    .title
+    {
+        font-size: 4.7vw;
+    }
+}
+
+

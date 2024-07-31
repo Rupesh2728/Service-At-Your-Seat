@@ -1,0 +1,59 @@
+.locicon
+{
+   font-size: 1.4vw;
+   margin-top: 0.4vw;
+}
+
+
+
+@media screen  and (max-width:1144px){
+    .locicon
+    {
+        font-size: 2vw;
+    }
+}
+
+
+@media screen  and (max-width:991px){
+    .locicon
+     {
+         font-size: 2.2vw;
+         margin-top: 0.8vw;
+     }
+}
+
+@media screen  and (max-width:767px){
+  
+     .locicon
+     {
+         font-size: 2.2vw;
+         margin-top: 0.8vw;
+     }
+}
+
+@media screen  and (max-width:576px){
+    
+    .locicon
+    {
+        font-size: 3vw;
+        margin-top: 1.3vw;
+    }
+}
+
+@media screen  and (max-width:450px){
+
+    .locicon
+    {
+        font-size: 3.5vw;
+        margin-top: 1.5vw;
+    }
+}
+
+@media screen  and (max-width:400px){
+
+    .locicon
+    {
+        font-size: 4.5vw;
+        margin-top: 1.5vw;
+    }
+}

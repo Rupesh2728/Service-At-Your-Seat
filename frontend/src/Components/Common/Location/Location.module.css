@@ -1,0 +1,42 @@
+.locationdiv
+{
+    display: flex;
+    justify-content: right;
+}
+
+@media screen  and (max-width:767px){
+    
+    .locationdiv
+    {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media screen  and (max-width:576px){
+  
+    .locationdiv
+    {
+        display: flex;
+        justify-content: center;
+    }
+
+}
+
+@media screen  and (max-width:450px){
+   
+   .locationdiv
+    {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media screen  and (max-width:400px){
+   
+    .locationdiv
+    {
+        display: flex;
+        justify-content: center;
+    }
+}

@@ -1,0 +1,55 @@
+.mainlocname
+{
+    margin:0;
+    padding: 0;
+    color:gold;
+    border:0;
+    width:7rem;
+    font-size:1.5vw;
+}
+
+@media screen  and (max-width:1144px){ 
+    .mainlocname
+    {
+        font-size: 1.8vw;
+    }
+}
+
+@media screen  and (max-width:991px){
+     .mainlocname
+     {
+         font-size: 2vw;
+     }
+ 
+ }
+
+ @media screen  and (max-width:767px){
+     .mainlocname
+     {
+         font-size: 2vw;
+     }
+ }
+
+ @media screen  and (max-width:576px){
+    .mainlocname
+    {
+        font-size: 3.2vw;
+    }
+
+}
+
+@media screen  and (max-width:450px){
+    .mainlocname
+    {
+        font-size: 4vw;
+    }
+}
+
+@media screen  and (max-width:400px){
+  
+    .mainlocname
+    {
+        font-size: 4.5vw;
+    }
+
+}
