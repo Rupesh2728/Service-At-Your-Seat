@@ -11,69 +11,6 @@ const userinfo = require("../../models/user/signup");
 
 
 
-/**
- * @swagger
- * /adminhome:
- *   get:
- *     summary: Get dashboard data for admin
- *     tags: [ADMIN HOME]
- *     responses:
- *       '200':
- *         description: Successful response
- *         content:
- *           application/json:
- *             schema:
- *               type: object
- *               properties:
- *                 msgobjarr:
- *                   type: array
- *                   description: Array of message objects
- *                   items:
- *                     type: object
- *                     properties:
- *                       sender:
- *                         type: string
- *                         description: Sender of the message
- *                       message:
- *                         type: string
- *                         description: Content of the message
- *                       date:
- *                         type: string
- *                         description: Date of the message
- *                 tnum:
- *                   type: integer
- *                   description: Number of theatres signed up
- *                   example: 10
- *                 unum:
- *                   type: integer
- *                   description: Number of users signed up
- *                   example: 100
- *                 theatreverificationarr:
- *                   type: array
- *                   description: Array of theatre verification objects
- *                   items:
- *                     type: object
- *                     properties:
- *                       theatreName:
- *                         type: string
- *                         description: Name of the theatre
- *                       verificationStatus:
- *                         type: string
- *                         description: Verification status of the theatre
- *       '404':
- *         description: Admin is not logged in
- *         content:
- *           application/json:
- *             schema:
- *               type: object
- *               properties:
- *                 result:
- *                   type: string
- *                   description: Indicates that the admin is not logged in
- *                   example: Admin Should login
- *       '500':
- *         description: Some error happened
- */
 
 router.get("/", async function (req, res) {
 
@@ -123,69 +60,6 @@ router.get("/", async function (req, res) {
   //   res.redirect("/login");
   // }
 });
-
-
-/**
- * @swagger
- * /adminhome/accepttheatre:
- *   post:
- *     summary: Accept theatre registration
- *     tags: [ADMIN HOME]
- *     requestBody:
- *       required: true
- *       content:
- *         application/json:
- *           schema:
- *             type: object
- *             properties:
- *               temail:
- *                 type: string
- *                 description: Email of the theatre to accept
- *                 example: theatre@example.com
- *     responses:
- *       '200':
- *         description: Theatre registration accepted successfully
- *         content:
- *           application/json:
- *             schema:
- *               type: object
- *               properties:
- *                 k:
- *                   type: integer
- *                   description: Indicates the success of the operation
- *                   example: 1
- *       '404':
- *         description: Admin is not logged in
- *         content:
- *           application/json:
- *             schema:
- *               type: object
- *               properties:
- *                 result:
- *                   type: string
- *                   description: Indicates that the admin is not logged in
- *                   example: Admin Should login
- *       '500':
- *         description: Internal server error
- *         content:
- *           application/json:
- *             schema:
- *               type: object
- *               properties:
- *                 error:
- *                   type: string
- *                   description: Error message
- *       '422':
- *         description: Unprocessable Entity - Missing or invalid request body
- *         content:
- *           application/json:
- *             schema:
- *               type: object
- *               properties:
- *                 error:
- *                   type: string
- *                   description: Error message indicating missing or invalid request body
- */
 
 
 router.post("/accepttheatre", async function (req, res) {
@@ -256,68 +130,6 @@ router.post("/accepttheatre", async function (req, res) {
 });
 
 
-
-/**
- * @swagger
- * /admin/rejecttheatre:
- *   post:
- *     summary: Reject theatre registration
- *     tags: [ADMIN HOME]
- *     requestBody:
- *       required: true
- *       content:
- *         application/json:
- *           schema:
- *             type: object
- *             properties:
- *               temail:
- *                 type: string
- *                 description: Email of the theatre to reject
- *                 example: theatre@example.com
- *     responses:
- *       '200':
- *         description: Theatre registration rejected successfully
- *         content:
- *           application/json:
- *             schema:
- *               type: object
- *               properties:
- *                 k:
- *                   type: integer
- *                   description: Indicates the success of the operation
- *                   example: 1
- *       '404':
- *         description: Admin is not logged in
- *         content:
- *           application/json:
- *             schema:
- *               type: object
- *               properties:
- *                 result:
- *                   type: string
- *                   description: Indicates that the admin is not logged in
- *                   example: Admin Should login
- *       '500':
- *         description: Internal server error
- *         content:
- *           application/json:
- *             schema:
- *               type: object
- *               properties:
- *                 error:
- *                   type: string
- *                   description: Error message
- *       '422':
- *         description: Unprocessable Entity - Missing or invalid request body
- *         content:
- *           application/json:
- *             schema:
- *               type: object
- *               properties:
- *                 error:
- *                   type: string
- *                   description: Error message indicating missing or invalid request body
- */
 
 
 router.post("/rejecttheatre", async function (req, res) {

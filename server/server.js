@@ -113,31 +113,6 @@ app.use("/Admintheatre", admintheatreroutes);
 app.use("/adminmassmail", adminmassmailroutes);
 
 
-const swaggerUI = require("swagger-ui-express");
-const swaggerJsDoc = require("swagger-jsdoc");
-const options={
-  definition:{
-    openapi: "3.0.0",
-    info:{
-      title: "SAYS API",
-      version: "1.0.0",
-      description: "A MOVIE TICKET BOOKING API"
-  },
-  servers: [
-    {
-      url: "https://says-backend.onrender.com",
-    },
-  ],
-},
-  apis: ["routes/**/*.js"],
-}
-
-
-	
- 
-
-const specs = swaggerJsDoc(options);
-app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(specs));
 
 
 app.use((err, req, res, next) => {
