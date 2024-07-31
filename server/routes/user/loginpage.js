@@ -33,7 +33,6 @@ router.post("/", function (req, res) {
       res.cookie("UserReferenceNumber", value[0].UserReferenceNumber,
         {
           httpOnly: true,
-          expires: token.expiresIn,
           secure:true,
           sameSite:'none',
           }
