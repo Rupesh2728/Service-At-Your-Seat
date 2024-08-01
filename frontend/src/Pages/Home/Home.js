@@ -8,8 +8,16 @@ import Footer from '../../Components/Common/Footer/Footer'
 import SecondSection from "../../Components/Home/SecondSection/SecondSection";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container } from "react-bootstrap";
+import { useSelector } from "react-redux";
+import Login from "../Login/Login";
 
 const Home=()=>{
+  const Client = useSelector((state) => state.Client.value[0]);
+  if(Client.Id===null || Client.Id===2)
+  {
+    return <Login/>;
+  }
+ 
     return (<div>
       <NavBar firstsection={FirstSection} pagename="Home"/>
      <Container>

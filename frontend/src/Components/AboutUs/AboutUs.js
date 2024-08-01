@@ -15,7 +15,18 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import NavBar from "../../Components/Common/NavBar/NavBar";
 import Footer from "../../Components/Common/Footer/Footer";
+import { useSelector } from "react-redux";
+import Login from "../../Pages/Login/Login";
 const AboutUs = () => {
+  
+     
+  const Client = useSelector((state) => state.Client.value[0]);
+  if(Client.Id===null || Client.Id===2)
+  {
+    return <Login/>;
+  }
+
+
   const teamMembers = [
     {
       name: "Rupesh",

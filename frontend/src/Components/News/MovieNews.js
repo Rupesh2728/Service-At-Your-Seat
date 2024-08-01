@@ -1,8 +1,17 @@
 import React from "react";
 import styles from "./MovieNews.module.css";
 import "./MovieNews2.module.css";
+import { useSelector } from "react-redux";
+import Login from "../../Pages/Login/Login";
 
 const MovieNews = () => {
+    
+  const Client = useSelector((state) => state.Client.value[0]);
+  if(Client.Id===null || Client.Id===2)
+  {
+    return <Login/>;
+  }
+
   return (
     <>
       <body>

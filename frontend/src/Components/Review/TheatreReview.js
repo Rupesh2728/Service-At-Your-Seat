@@ -6,10 +6,13 @@ import { faStar as farStar } from "@fortawesome/free-regular-svg-icons";
 import { Link } from "react-router-dom";
 import { useLocation} from 'react-router-dom';
 import URL from '../../URL';
+import Login from '../../Pages/Login/Login';
+import { useSelector } from 'react-redux';
 
 
 
 const TheatreReview = () => {
+
     const { search } = useLocation();
     const params = new URLSearchParams(search);
     const treff = (params.get('treff'));
@@ -66,6 +69,15 @@ const TheatreReview = () => {
           setrating("");
           settreview("");
       }
+
+          
+  const Client = useSelector((state) => state.Client.value[0]);
+  if(Client.Id===null || Client.Id===2)
+  {
+    return <Login/>;
+  } 
+
+  
       
       return (
         <>

@@ -4,7 +4,7 @@ const initialState={
     value:[
         {
             client:"User",
-            Id:"",
+            Id:null,
             currtheatrecity:""
         }
         ]

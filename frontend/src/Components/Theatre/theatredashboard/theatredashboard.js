@@ -9,6 +9,8 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import internalcss from './theatredashboard.module.css';
 import URL from "../../../URL.js";
+import Login from "../../../Pages/Login/Login.js";
+import { useSelector } from "react-redux";
 
 
 // import { useNavigate } from "react-router-dom";
@@ -39,6 +41,14 @@ function Theatredashboard() {
   useEffect(()=>{
     getDetails();
   },[]);
+
+      
+  const Client = useSelector((state) => state.Client.value[0]);
+  if(Client.Id===null || Client.Id===1)
+  {
+    return <Login/>;
+  } 
+
 
   return (
     <>

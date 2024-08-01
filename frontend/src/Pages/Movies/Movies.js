@@ -5,10 +5,14 @@ import MoviesSection from '../../Components/Movies/MoviesSection/MoviesSection';
 import Footer from '../../Components/Common/Footer/Footer';
 import { useState, useEffect } from 'react';
 import URL from '../../URL';
+import { useNavigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import Login from '../Login/Login';
 
 
 const Movies = () => {
-
+ 
+  const pageshift = useNavigate();
   const [Lfilter, setLfilter] = useState("ALL");  //state for filter show or hide
   const [Gfilter, setGfilter] = useState("ALL");  //state for filter show or hide
   const [LocFilter, setLocFilter] = useState("Vijayawada");
@@ -48,9 +52,13 @@ const Movies = () => {
     });
 
     let x = await response.json();
-    if(x)
-    console.log(x);
-
+    if(x.result==="notloggedin")
+    {
+        pageshift('/login');
+    }
+    else
+    {
+      
     setLMoviesArray(x.latestmovies.filter((item) => {
 
       if (Lfilter === 'ALL' && Gfilter === 'ALL') {
@@ -87,6 +95,7 @@ const Movies = () => {
 
     setReviewArray(x.reviewdata);
     setLocation(x.checklocaton);
+    }
 
   }
 
@@ -101,7 +110,12 @@ const Movies = () => {
     renderData(LocFilter);
   }, [LocFilter])
 
-
+     
+  const Client = useSelector((state) => state.Client.value[0]);
+  if(Client.Id===null || Client.Id===2)
+  {
+    return <Login/>;
+  }
 
   return (
     <>

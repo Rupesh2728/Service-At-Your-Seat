@@ -5,6 +5,8 @@ import { Container } from 'react-bootstrap';
 import AddScreen from './AddScreen/AddScreen';
 import AddShow from './AddShow/AddShow';
 import URL from '../../../URL';
+import Login from '../../../Pages/Login/Login';
+import { useSelector } from 'react-redux';
 
 
 
@@ -168,6 +170,14 @@ const TSchedule = () => {
  console.log(k);
  renderDeatils();
   }
+
+
+  const Client = useSelector((state) => state.Client.value[0]);
+  if(Client.Id===null || Client.Id===1)
+  {
+    return <Login/>;
+  } 
+
 
   return (
     <div>

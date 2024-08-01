@@ -96,7 +96,6 @@ async function fillLatestandUpcoming(datevalue, city, latestmovies1, upcomingmov
 
 
 router.post("/", async (req, res) => {
-  console.log(req.cookies.islogin);
   if(!req.cookies.islogin){
     res.status(404).json({
       result: "notloggedin"

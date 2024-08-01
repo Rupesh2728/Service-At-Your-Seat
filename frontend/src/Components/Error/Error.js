@@ -1,7 +1,16 @@
 import React from 'react';
 import bgimg from '../../Assests/Error/Errorbg.jpeg';
 import { Link } from 'react-router-dom';
+import Login from '../../Pages/Login/Login';
+import { useSelector } from 'react-redux';
 function Error() {
+
+      
+  const Client = useSelector((state) => state.Client.value[0]);
+  if(Client.Id===null)
+  {
+    return <Login/>;
+  } 
   
     return (  
     <>
