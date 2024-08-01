@@ -83,12 +83,12 @@ async function fillLatestandUpcoming(datevalue, city, latestmovies1, upcomingmov
 
       // console.log(value1[0].movies[i]);
 
-      if (result.localeCompare(datevalue) >= 0) {
-        // console.log("inside latest2");
+      // if (result.localeCompare(datevalue) >= 0) {
+      //   // console.log("inside latest2");
         latestmovies1.push(value1[0].movies[i]);
         reviewdata1.push(value1[0].movies[i]);
 
-      }
+      // }
 
 
 
@@ -467,30 +467,6 @@ router.post("/getsuggestion", async function (req, res) {
   res.json(latestmovies);
 });
 
-// router.post("/", async function (req, res) {
 
-//   let city = req.body.location;
-//   let datevalue = req.body.date;
-//   let latestmovies = [];
-//   let upcomingmovies = [];
-//   let reviewdata = [];
-
-//   console.log(city);
-//   await fillLatestandUpcoming(datevalue, city, latestmovies, upcomingmovies,reviewdata);
-//   await CheckLatestMoviesForReviewHub(reviewdata);
-
-
-
-  
-//     res.json({
-//       checklocaton: city,
-//       checkLangfileter: "",
-//       checkGenrefilter: "",
-//       latestmovies: latestmovies,
-//       upcomingmovies: upcomingmovies,
-//       reviewdata: reviewdata,
-//     });
- 
-// });
 
 module.exports = router;

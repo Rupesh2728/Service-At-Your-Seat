@@ -92,7 +92,7 @@ const Movies = () => {
 
   useEffect(() => {
 
-    renderData("Vijayawada");
+    renderData(LocFilter);
 
   }, [Lfilter, Gfilter])
 

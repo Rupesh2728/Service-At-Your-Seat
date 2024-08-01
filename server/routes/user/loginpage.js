@@ -28,8 +28,6 @@ router.post("/", function (req, res) {
       });
     } else {
 
-      console.log("User Login success");
-      // req.session.UserReferenceNumber= value[0].UserReferenceNumber; //Ass
       res.cookie("UserReferenceNumber", value[0].UserReferenceNumber,
         {
           httpOnly: true,

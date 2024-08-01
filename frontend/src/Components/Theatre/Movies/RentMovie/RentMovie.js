@@ -15,7 +15,9 @@ export const RentMovie = ({ rentMovieHandler, rentedMovies, show, handleClose,to
 
   const onSubmit = (data) => {
 
-    rentMovieHandler(data);
+     console.log(data);
+
+    // rentMovieHandler(data);
 
   };
 
@@ -38,8 +40,8 @@ export const RentMovie = ({ rentMovieHandler, rentedMovies, show, handleClose,to
             <label htmlFor="customer_email" className='text-black'>Theatre Mail:</label>
             <input {...register('temail')} className={classes.email} type='email' value={tobj.temail} required readOnly />
 
-            <label htmlFor="rental_days" className='text-black'>Rental Days:</label>
-            <input {...register('rentaldays')} className={classes.number} type='number' min="1" max="30" required />
+            {/* <label htmlFor="rental_days" className='text-black'>Rental Days:</label> */}
+            <input {...register('rentaldays')} className={classes.number} type='number' min="1" max="30" required style={{display:"none"}}/>
 
             <label htmlFor="rental_date" className='text-black'>Rental Date:</label>
             <input {...register('rentaldate')} className={classes.date} type='date'  required />
