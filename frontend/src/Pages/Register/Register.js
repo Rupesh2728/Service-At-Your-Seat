@@ -6,8 +6,6 @@ import classes from './Register.module.css';
 
 const Register = (props) => {
 
-
-
   return (<div className={classes.style}>
     <Container>
       <Header headervalue="Registration" />

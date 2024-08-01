@@ -3,6 +3,8 @@ import TNavbar from "../TCommon/navbar.js";
 import UtiInfoCss from './usertheatreinfo.module.css';
 import { useNavigate } from "react-router-dom";
 import URL from "../../../URL.js";
+import Login from "../../../Pages/Login/Login.js";
+import { useSelector } from "react-redux";
 
 
 
@@ -114,6 +116,13 @@ const Usertheatreinfo = () => {
         useEffect(()=>{
            getDetails();
         },[]);
+
+  const Client = useSelector((state) => state.Client.value[0]);
+  if(Client.Id===null || Client.Id===1)
+  {
+    return <Login/>;
+  } 
+  
 
     return (
         <div>

@@ -58,7 +58,7 @@ const LoginForm = (props) => {
     switch (output.result) {
       case "home":
         dispatch(ref([{
-          Id:output.UserReferenceNumber,
+          Id:1,
           City:""
           }]))    
         navigate("/User/HomePage")
@@ -66,19 +66,23 @@ const LoginForm = (props) => {
 
       case "theatre":
         dispatch(ref([{
-          Id:output.currtheatrereffnum,
+          Id:2,
           City:output.currtheatrecity
           }])) 
         navigate("/Theatre/Theatredashboard")
         break;
 
       case "adminhome":
-        console.log("hi ra tester");
+        dispatch(ref([{
+          Id:0,
+          City:"",
+          }])) 
         navigate("/Admin")
         break;
 
       case "error":
         setError("Incorrect Credintials");
+        navigate('*');
     }
 
 

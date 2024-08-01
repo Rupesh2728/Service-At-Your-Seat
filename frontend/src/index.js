@@ -6,6 +6,8 @@ import './index.css';
 import { configureStore } from '@reduxjs/toolkit';
 import { Provider } from 'react-redux'
 import  ClientReducer from './ReduxStores/LoginRedux'
+
+
 const store=configureStore({
     reducer:{
       Client:ClientReducer
@@ -14,7 +16,8 @@ const store=configureStore({
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <Provider store={store}>
-    <App />
+    
+    <Provider store={store}>
+      <App />
     </Provider>
 );

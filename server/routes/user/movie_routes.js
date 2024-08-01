@@ -25,21 +25,21 @@ function convertdate(inputDate) {
 }
 async function CheckLatestMoviesForReviewHub(reviewdata) {
 
-  let reviewdataX=[];
+  let reviewdataX = [];
   for (let i = 0; i < reviewdata.length; i++) {
     let myobj2 = { movie: reviewdata[i]["MovieName"] };
-    
+
     let x = await moviereviewdata.find(myobj2).sort({ rating: -1 }).limit(1);
 
-   
+
     if (x.length != 0) {
-     
-      reviewdataX.push({...reviewdata[i],rating:x[0]["rating"],reviewdesc:x[0]["reviewdesc"]});
-      
-   
+
+      reviewdataX.push({ ...reviewdata[i], rating: x[0]["rating"], reviewdesc: x[0]["reviewdesc"] });
+
+
     } else {
-      reviewdataX.push({...reviewdata[i],rating:"",reviewdesc:""});
-      
+      reviewdataX.push({ ...reviewdata[i], rating: "", reviewdesc: "" });
+
     }
   }
 
@@ -81,8 +81,8 @@ async function fillLatestandUpcoming(datevalue, city, latestmovies1, upcomingmov
 
     if (rentaldate.localeCompare(today) <= 0) {
 
-        latestmovies1.push(value1[0].movies[i]);
-        reviewdata1.push(value1[0].movies[i]);
+      latestmovies1.push(value1[0].movies[i]);
+      reviewdata1.push(value1[0].movies[i]);
     }
     else {
       upcomingmovies1.push(value1[0].movies[i]);
@@ -96,15 +96,14 @@ async function fillLatestandUpcoming(datevalue, city, latestmovies1, upcomingmov
 
 
 router.post("/", async (req, res) => {
- 
-    if(req.cookies.islogin!="user" && req.cookies.islogin!="admin")
-      {
-       res.status(404).json({
-         result: "notloggedin"
-       });
-      }
- 
-  
+
+  if (req.cookies.islogin != "user" && req.cookies.islogin != "admin") {
+    res.status(404).json({
+      result: "notloggedin"
+    });
+  }
+
+
 
   let default_city = req.body.location;
   let latestmovies = [];
@@ -116,9 +115,8 @@ router.post("/", async (req, res) => {
   await fillLatestandUpcoming(today, default_city, latestmovies, upcomingmovies, reviewdata);
 
   await CheckLatestMoviesForReviewHub(reviewdata);
-   
-  if(req.cookies.islogin==="user")
-  {
+
+  if (req.cookies.islogin === "user") {
     res.json({
       checklocaton: default_city,
       checkLangfileter: "",
@@ -134,7 +132,7 @@ router.post("/", async (req, res) => {
 
 router.get("/individualmovie", async (req, res) => {
 
-  if(req.cookies.islogin!="user"&&req.cookies.islogin!="admin"){
+  if (req.cookies.islogin != "user" && req.cookies.islogin != "admin") {
     res.status(404).json({
       result: "notloggedin"
     });
@@ -154,7 +152,7 @@ router.get("/individualmovie", async (req, res) => {
 
 router.get("/timings", async (req, res) => {
 
-  if(req.cookies.islogin!="user"&&req.cookies.islogin!="admin"){
+  if (req.cookies.islogin != "user" && req.cookies.islogin != "admin") {
     res.status(404).json({
       result: "notloggedin"
     });
@@ -231,7 +229,7 @@ router.get("/timings", async (req, res) => {
 
 router.post("/timings", async function (req, res) {
 
-  if(req.cookies.islogin!="user"){
+  if (req.cookies.islogin != "user") {
     res.status(404).json({
       result: "notloggedin"
     });
@@ -249,8 +247,8 @@ router.post("/timings", async function (req, res) {
 
 
 router.post("/seatarrangement/getseatarr", async function (req, res) {
-  
-  if(req.cookies.islogin!="user"&&req.cookies.islogin!="admin"){
+
+  if (req.cookies.islogin != "user" && req.cookies.islogin != "admin") {
     res.status(404).json({
       result: "notloggedin"
     });
@@ -279,7 +277,7 @@ router.post("/seatarrangement/getseatarr", async function (req, res) {
 
 router.post("/seatarrangement/addticket", async function (req, res) {
 
-  if(req.cookies.islogin!="user"&&req.cookies.islogin!="admin"){
+  if (req.cookies.islogin != "user" && req.cookies.islogin != "admin") {
     res.status(404).json({
       result: "notloggedin"
     });
@@ -360,12 +358,12 @@ router.post("/seatarrangement/addticket", async function (req, res) {
 
 
 router.put("/seatarrangement/updateseatsarr", async function (req, res) {
-  if(req.cookies.islogin!="user"&&req.cookies.islogin!="admin"){
+  if (req.cookies.islogin != "user" && req.cookies.islogin != "admin") {
     res.status(404).json({
       result: "notloggedin"
     });
   }
-   
+
   let seatarr = req.body.seatarr;
   let treff = req.body.tReff;
   let sname = req.body.sname;
@@ -398,8 +396,8 @@ router.put("/seatarrangement/updateseatsarr", async function (req, res) {
 
 
 router.get("/seatarrangement", async (req, res) => {
-  
-  if(req.cookies.islogin!="user"&&req.cookies.islogin!="admin"){
+
+  if (req.cookies.islogin != "user" && req.cookies.islogin != "admin") {
     res.status(404).json({
       result: "notloggedin"
     });
@@ -458,8 +456,8 @@ router.get("/seatarrangement", async (req, res) => {
 
 
 router.post("/searchbar", async function (req, res) {
-  
-  if(req.cookies.islogin!="user"){
+
+  if (req.cookies.islogin != "user") {
     res.status(404).json({
       result: "notloggedin"
     });
@@ -473,7 +471,7 @@ router.post("/searchbar", async function (req, res) {
 
 router.post("/getsuggestion", async function (req, res) {
 
-  if(req.cookies.islogin!="user"){
+  if (req.cookies.islogin != "user") {
     res.status(404).json({
       result: "notloggedin"
     });

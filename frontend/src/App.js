@@ -198,8 +198,6 @@ const router = createBrowserRouter([
     element:<Error/>
   }
 
-
-
 ]);
 
 function App() {
