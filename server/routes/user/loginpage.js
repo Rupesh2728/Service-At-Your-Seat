@@ -27,16 +27,28 @@ router.post("/", function (req, res) {
         result: "error",
       });
     } else {
-      res.cookie("UserReferenceNumber", value[0].UserReferenceNumber, process.env.options);
+      res.cookie("UserReferenceNumber", value[0].UserReferenceNumber, {
+        httpOnly: true,
+        secure:true,
+        sameSite:'none',
+        });
       if (email == "saysadmin@gmail.com") {
-        res.cookie("islogin", "admin",process.env.options);
+        res.cookie("islogin", "admin",{
+          httpOnly: true,
+          secure:true,
+          sameSite:'none',
+          });
         // req.session.islogin= "admin";
         res.status(200).json({
           result: "adminhome"
         })
       }
       else{
-        res.cookie("islogin", "user",process.env.options);
+        res.cookie("islogin", "user",{
+          httpOnly: true,
+          secure:true,
+          sameSite:'none',
+          });
         // req.session.islogin= "user";
         res.status(200).json({
           result: "home",

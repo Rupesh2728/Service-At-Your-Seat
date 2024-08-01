@@ -13,11 +13,11 @@ const ticketinfo = require("../../models/user/ticketsinfo");
 
 router.get("/", async function (req, res) {
    
-  // if(req.cookies.islogin!="admin"){
-  //   res.status(404).json({
-  //     result: "Admin Should login"
-  //   });
-  // }
+  if(req.cookies.islogin!="admin"){
+    res.status(404).json({
+      result: "Admin Should login"
+    });
+  }
 
   let value = await userinfo.find({});
   res.json({users:value});
@@ -27,11 +27,11 @@ router.get("/", async function (req, res) {
 
 router.delete("/removeuser", async function (req, res) {
 
-  // if(req.cookies.islogin!="admin"){
-  //   res.status(404).json({
-  //     result: "Admin Should login"
-  //   });
-  // }
+  if(req.cookies.islogin!="admin"){
+    res.status(404).json({
+      result: "Admin Should login"
+    });
+  }
 
   let ureffnum = req.body.uid;
 

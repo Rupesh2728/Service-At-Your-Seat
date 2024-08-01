@@ -11,10 +11,23 @@ const citymovie = require("../../models/theatre/citymovie");
 
 
 router.get("/gettreffnum", function (req, res) {
+
+  if(req.cookies.islogin!="theatre"){
+    res.status(404).json({
+      result: "notloggedin"
+    });
+  }
+
   res.json(req.cookies.currtheatrereffnum);
 });
 
 router.get("/gettheatredetails", function (req, res) {
+
+  if(req.cookies.islogin!="theatre"){
+    res.status(404).json({
+      result: "notloggedin"
+    });
+  }
 
   theatresignupinfo
     .find({ tReferenceNumber: req.cookies.currtheatrereffnum })
@@ -27,11 +40,11 @@ router.get("/gettheatredetails", function (req, res) {
 
 router.post("/getmoviedetails", function (req, res) {
  
-  // if(req.cookies.islogin!="theatre"&&req.cookies.islogin!="admin"){
-  //   res.status(404).json({
-  //     result: "notloggedin"
-  //   });
-  // }
+  if(req.cookies.islogin!="theatre"){
+    res.status(404).json({
+      result: "notloggedin"
+    });
+  }
   
   console.log("hi");
 
@@ -46,6 +59,13 @@ router.post("/getmoviedetails", function (req, res) {
 
 
 router.get("/", async function (req, res) {
+
+  if(req.cookies.islogin!="theatre"){
+    res.status(404).json({
+      result: "notloggedin"
+    });
+  }
+
   let rentalmoviearr = [];
   let activemoviearr = [];
   let inactivemoviearr = [];
@@ -100,6 +120,13 @@ router.get("/", async function (req, res) {
 });
 
 router.post("/rental", async function (req, res) {
+
+  if(req.cookies.islogin!="theatre"){
+    res.status(404).json({
+      result: "notloggedin"
+    });
+  }
+
   let movietitle = req.body.MovieName;
   let tname = req.body.tname;
   let temail = req.body.temail;
@@ -181,6 +208,13 @@ router.post("/rental", async function (req, res) {
 });
 
 router.post("/addmovie", async function (req, res) {
+  
+  if(req.cookies.islogin!="theatre"){
+    res.status(404).json({
+      result: "notloggedin"
+    });
+  }
+
   let moviename = req.body.MovieName;
   let status = req.body.status;
   let movieid;
@@ -302,6 +336,13 @@ router.post("/addmovie", async function (req, res) {
 });
 
 router.post("/editmovie", async function (req, res) {
+ 
+  if(req.cookies.islogin!="theatre"){
+    res.status(404).json({
+      result: "notloggedin"
+    });
+  }
+
   let moviename = req.body.moviename;
   let status = req.body.moviestatus;
   let movieid;

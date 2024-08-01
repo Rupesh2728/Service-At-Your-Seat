@@ -6,9 +6,16 @@ const contactusqueries = require("../../models/Admin/contactusqueries");
 const userinfo = require("../../models/user/signup");
 
 router.get("/", async function (req, res) {
-    // const show_error_contactus = req.cookies.show_error_contactus;
-    // res.clearCookie("show_error_contactus");
-  
+    
+
+  if(req.cookies.islogin!="user"){
+    res.status(404).json({
+      result: "notloggedin"
+    });
+  }
+     
+    
+
     let value = await contactusqueries.find({
       UserReferenceNumber: req.cookies.UserReferenceNumber,
     });
@@ -43,6 +50,13 @@ router.get("/", async function (req, res) {
 
 
   router.post("/", async function (req, res) {
+
+    if(req.cookies.islogin!="user"){
+      res.status(404).json({
+        result: "notloggedin"
+      });
+    }
+
     let email = req.body.email;
     let message = req.body.message;
     let uname = req.body.uname;

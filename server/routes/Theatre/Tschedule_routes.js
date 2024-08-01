@@ -9,6 +9,14 @@ const movieinfo = require("../../models/theatre/movieinfo");
 const movieshowinfo = require("../../models/theatre/movieshowdetails");
 
 router.get("/", async function (req, res) {
+ 
+  if(req.cookies.islogin!="theatre"){
+    res.status(404).json({
+      result: "notloggedin"
+    });
+  }
+
+
   let screeninfoarr = [];
   let value = await screeninfo.find({
     tReferenceNumber: req.cookies.currtheatrereffnum,
@@ -82,6 +90,13 @@ router.get("/", async function (req, res) {
 });
 
 router.post("/getscreendetails", async function (req, res) {
+
+  if(req.cookies.islogin!="theatre"){
+    res.status(404).json({
+      result: "notloggedin"
+    });
+  }
+
   let value = await screeninfo.find({
     tReferenceNumber: req.cookies.currtheatrereffnum,
   });
@@ -99,6 +114,14 @@ router.post("/getscreendetails", async function (req, res) {
 });
 
 router.post("/editsavescreen", async function (req, res) {
+
+
+  if(req.cookies.islogin!="theatre"){
+    res.status(404).json({
+      result: "notloggedin"
+    });
+  }
+
   let esname = req.body.sname;
   let escapacity = req.body.scapacity;
   let esnumrows = req.body.snumrows;
@@ -141,6 +164,13 @@ router.post("/editsavescreen", async function (req, res) {
 });
 
 router.post("/removescreen", async function (req, res) {
+
+  if(req.cookies.islogin!="theatre"){
+    res.status(404).json({
+      result: "notloggedin"
+    });
+  }
+
   let value = await screeninfo.find({
     tReferenceNumber: req.cookies.currtheatrereffnum,
   });
@@ -174,11 +204,25 @@ router.post("/removescreen", async function (req, res) {
 });
 
 router.post("/getmoviedetails", async function (req, res) {
+
+  if(req.cookies.islogin!="theatre"){
+    res.status(404).json({
+      result: "notloggedin"
+    });
+  }
+
   let value = await movieinfo.find({ MovieName: req.body.mname });
   res.json(value[0]);
 });
 
 router.post("/addshow", async function (req, res) {
+
+  if(req.cookies.islogin!="theatre"){
+    res.status(404).json({
+      result: "notloggedin"
+    });
+  }
+
   let screenname = req.body.selectscreen;
   let mname = req.body.selectmovie;
   let duration = req.body.duration;
@@ -246,6 +290,14 @@ router.post("/addshow", async function (req, res) {
 });
 
 router.post("/removeshow", async function (req, res) {
+
+
+  if(req.cookies.islogin!="theatre"){
+    res.status(404).json({
+      result: "notloggedin"
+    });
+  }
+
   let removemname = req.body.removemname;
   let screenname = req.body.screenname;
   let showtime = req.body.showtime;
@@ -286,6 +338,14 @@ router.post("/removeshow", async function (req, res) {
 });
 
 router.post("/getshowdetails", async function (req, res) {
+
+
+  if(req.cookies.islogin!="theatre"){
+    res.status(404).json({
+      result: "notloggedin"
+    });
+  }
+
   let value = await movieshowinfo.find({
     tReferenceNumber: req.cookies.currtheatrereffnum,
   });
@@ -308,6 +368,13 @@ router.post("/getshowdetails", async function (req, res) {
 });
 
 router.post("/editsaveshowdetails", async function (req, res) {
+
+  if(req.cookies.islogin!="theatre"){
+    res.status(404).json({
+      result: "notloggedin"
+    });
+  }
+
   let screenname = req.body.editselectscreen;
   let mname = req.body.editselectmovie;
   let duration = req.body.editduration;
@@ -371,6 +438,15 @@ router.post("/editsaveshowdetails", async function (req, res) {
 
 
 router.post("/addscreen", async function (req, res) {
+
+
+  if(req.cookies.islogin!="theatre"){
+    res.status(404).json({
+      result: "notloggedin"
+    });
+  }
+
+
   let k = 0;
   let arrangementarr = req.body.seatarr;
   let screenname = req.body.screenname;

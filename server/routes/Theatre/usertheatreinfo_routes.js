@@ -8,6 +8,13 @@ const userTinfo = require("../../models/theatre/abouttheatre");
 
 
 router.get("/", async function (req, res){
+
+  if(req.cookies.islogin!="theatre"){
+    res.status(404).json({
+      result: "notloggedin"
+    });
+  }
+
     let value2 = await theatresignupinfo.find({
       tReferenceNumber: req.cookies.currtheatrereffnum,
     });
@@ -16,6 +23,14 @@ router.get("/", async function (req, res){
   });
   
 router.post("/", async function (req, res) {
+
+  if(req.cookies.islogin!="theatre"){
+    res.status(404).json({
+      result: "notloggedin"
+    });
+  }
+
+
     let value = await userTinfo.find({
       tReferenceNumber: req.cookies.currtheatrereffnum,
     });
@@ -83,6 +98,15 @@ router.post("/", async function (req, res) {
   });
   
   router.post("/getinfo", async function (req, res) {
+
+    if(req.cookies.islogin!="theatre"){
+      res.status(404).json({
+        result: "notloggedin"
+      });
+    }
+      
+
+
     let treffnum = req.body.treffnum;
     let value = await userTinfo.find({ tReferenceNumber: treffnum });
     if (value.length == 0) res.json({ k: 1 });
@@ -94,6 +118,13 @@ router.post("/", async function (req, res) {
   });
   
   router.get("/getreffnum", function (req, res) {
+
+    if(req.cookies.islogin!="theatre"){
+      res.status(404).json({
+        result: "notloggedin"
+      });
+    }
+
     res.json({ treffnum: req.cookies.currtheatrereffnum });
   });
 

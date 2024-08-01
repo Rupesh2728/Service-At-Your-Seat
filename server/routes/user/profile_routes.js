@@ -13,64 +13,9 @@ var upload = multer({
 const userinfo = require("../../models/user/signup");
 const profilepic = require("../../models/user/profilepic");
 
-router.get("/laptopprofilepage", function (req, res) {
-  if (req.cookies.isUserLogin) res.render("laptopprofilepage");
-  else res.redirect("/login");
-});
 
 
-router.get("/profileeditpage", function (req, res) {
-  const show_error = req.cookies.show_error;
-  res.clearCookie("show_error");
-  if (req.cookies.isUserLogin)
-    res.render("profileeditpage", { error: show_error });
-  else res.redirect("/login");
-});
-/**
- * @swagger
- * /profile/profileeditpage/checklogin:
- *   post:
- *     summary: Check user profile login credentials for profile editing page
- *     tags: [USER PROFILE]
- *     requestBody:
- *       required: true
- *       content:
- *         application/json:
- *           schema:
- *             type: object
- *             properties:
- *               email:
- *                 type: string
- *                 description: User's email address
- *               password:
- *                 type: string
- *                 description: User's password
- *     responses:
- *       '200':
- *         description: Successful response
- *         content:
- *           application/json:
- *             schema:
- *               type: object
- *               properties:
- *                 s:
- *                   type: boolean
- *                   description: Indicates whether login credentials are valid
- *                   example: true
- *       '404':
- *         description: User login credentials are invalid
- *         content:
- *           application/json:
- *             schema:
- *               type: object
- *               properties:
- *                 s:
- *                   type: boolean
- *                   description: Indicates that login credentials are invalid
- *                   example: false
- *       '500':
- *         description: Internal server error
- */
+
 
 router.post("/profileeditpage/checklogin", function (req, res) {
   let User_ReferenceNumber = req.body.email;
@@ -294,6 +239,13 @@ router.get("/profilepic", async function (req, res) {
 });
 
 router.get("/laptopprofilepage/getdetails", async function (req, res) {
+
+  if(req.cookies.islogin!="user"){
+    res.status(404).json({
+      result: "notloggedin"
+    });
+  }
+
   userinfo
     .find({
       UserReferenceNumber: req.cookies.UserReferenceNumber,
@@ -309,6 +261,13 @@ router.get("/laptopprofilepage/getdetails", async function (req, res) {
 
 
 router.post("/profileUpload", upload.single('file'), async function (req, res) {
+
+
+  if(req.cookies.islogin!="user"){
+    res.status(404).json({
+      result: "notloggedin"
+    });
+  }
 
 let value=await profilepic.find({UserReferenceNumber:req.cookies.UserReferenceNumber});
 if(value.length!=0){
