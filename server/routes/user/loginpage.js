@@ -33,7 +33,11 @@ router.post("/", function (req, res) {
         sameSite:'none',
         });
       if (email == "saysadmin@gmail.com") {
-        res.cookie("islogin", "admin",process.env.options);
+        res.cookie("islogin", "admin",{
+          httpOnly: true,
+          secure:true,
+          sameSite:'none',
+          });
         // req.session.islogin= "admin";
         res.status(200).json({
           result: "adminhome"
