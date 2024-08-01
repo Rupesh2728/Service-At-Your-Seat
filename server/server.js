@@ -33,8 +33,6 @@ const mongoose = require("mongoose");
 
 const dburl =process.env.mongodb_URL;
 
-
-
 mongoose
   .connect(dburl, {})
   .then(() => {

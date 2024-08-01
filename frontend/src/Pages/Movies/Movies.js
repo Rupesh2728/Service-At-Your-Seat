@@ -36,7 +36,6 @@ const Movies = () => {
   }
 
   async function renderData(DefLoc) {
-    // console.log("hi came");
     let response = await fetch(URL+"/movies", {
       method: "POST",
       headers: {
@@ -49,6 +48,7 @@ const Movies = () => {
     });
 
     let x = await response.json();
+    if(x)
     console.log(x);
 
     setLMoviesArray(x.latestmovies.filter((item) => {
