@@ -115,7 +115,8 @@ app.use("/adminmassmail", adminmassmailroutes);
 
 app.use((err, req, res, next) => {
   // console.log("Error Printed");
-  console.log(err.message);
+
+  console.log("hi",err.message);
   errorStatusCode = err.statusCode || 500;
   res.status(errorStatusCode).json({ error: 'Something broke!' });
   
