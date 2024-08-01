@@ -10,20 +10,6 @@ const rentalmovieinfo = require("../../models/theatre/rentalmovieslist.js");
 router.get("/", async function (req, res) {
 
 
-
-  // if (req.cookies.islogin != "admin") {
-  //   res.status(404).json({
-  //     result: "Admin Should login"
-  //   });
-  // }
-  try {
-    const cachedData = await redis.get('Admin_Movies');
-    if (cachedData) {
-      console.log('Data retrieved from cache');
-      // console.log(JSON.parse(cachedData));
-      return res.json(cachedData);
-    }
-
     let rentalmoviearr = await movieinfo.find({});
     let value1 = await rentalmovieinfo.find({});
     let rentalmovieslocarr = [];
@@ -36,13 +22,9 @@ router.get("/", async function (req, res) {
       rentalmoviearr: rentalmoviearr,
       rentalmovieslocarr: rentalmovieslocarr,
     }
-    await redis.set('Admin_Movies', JSON.stringify(data));
+ 
     res.status(200).json(data);
-  }
-  catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ message: "Internal server error" });
-  }
+  
 
 });
 
@@ -159,7 +141,7 @@ router.post("/adminrentalmovieinfo", async function (req, res) {
     rentalmoviearr: rentalmoviearr,
     rentalmovieslocarr: rentalmovieslocarr,
   }
-  await redis.set('Admin_Movies', JSON.stringify(data));
+  
   res.json("added");
 });
 
@@ -191,7 +173,7 @@ router.delete("/adminremovemovie", async function (req, res) {
     rentalmoviearr: rentalmoviearr,
     rentalmovieslocarr: rentalmovieslocarr,
   }
-  await redis.set('Admin_Movies', JSON.stringify(data));
+  
   res.json({ k: 1 });
 });
 
