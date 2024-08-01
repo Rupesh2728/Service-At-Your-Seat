@@ -8,6 +8,13 @@ const theatresignupinfo = require("../../models/theatre/signup");
 
 
 router.get("/", function (req, res) {
+ 
+  if(req.cookies.islogin!="theatre"){
+    res.status(404).json({
+      result: "notloggedin"
+    });
+  }
+
   theatresignupinfo
     .find({ tReferenceNumber: req.cookies.currtheatrereffnum })
     .then((value) => {
@@ -20,15 +27,22 @@ router.get("/", function (req, res) {
 
 
 
-router.get("/teditprofile", function (req, res) {
-  const show_error = req.cookies.show_error;
-  res.clearCookie("show_error");
-  if (req.cookies.isTlogin)
-    res.render("theatreeditprofilepage", { error: show_error });
-  else res.redirect("/login");
-});
+// router.get("/teditprofile", function (req, res) {
+//   const show_error = req.cookies.show_error;
+//   res.clearCookie("show_error");
+//   if (req.cookies.isTlogin)
+//     res.render("theatreeditprofilepage", { error: show_error });
+//   else res.redirect("/login");
+// });
 
 router.post("/teditprofile", function (req, res) {
+
+  if(req.cookies.islogin!="theatre"){
+    res.status(404).json({
+      result: "notloggedin"
+    });
+  }
+
   let document = {};
   let TheatreReferenceNumber = req.cookies.currtheatrereffnum;
   let Theatre_Name = req.body.Theatre_Name;

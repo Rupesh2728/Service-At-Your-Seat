@@ -5,6 +5,14 @@ const router = express.Router();
 const snackinfo = require("../../models/theatre/snackinfo");
 
 router.post("/removesnack", async function (req, res) {
+
+  if(req.cookies.islogin!="theatre"){
+    res.status(404).json({
+      result: "notloggedin"
+    });
+  }
+
+
     let sname = req.body.sname;
     let category = req.body.category;
     let value = await snackinfo.find({
@@ -41,6 +49,15 @@ router.post("/removesnack", async function (req, res) {
   });
   
   router.get("/", async function (req, res) {
+
+
+    if(req.cookies.islogin!="theatre"){
+      res.status(404).json({
+        result: "notloggedin"
+      });
+    }
+
+
     let snackinfoarr = [];
     let value = await snackinfo.find({
       tReferenceNumber: req.cookies.currtheatrereffnum,
@@ -68,6 +85,14 @@ router.post("/removesnack", async function (req, res) {
   });
   
   router.post("/addsnack", async function (req, res) {
+
+    if(req.cookies.islogin!="theatre"){
+      res.status(404).json({
+        result: "notloggedin"
+      });
+    }
+
+
     let flag = 0;
     let convertstr = function (str) {
       let words = str.split(" ");
@@ -169,6 +194,13 @@ router.post("/removesnack", async function (req, res) {
   };
 
   router.post("/getsnackdetails", function (req, res) {
+
+    if(req.cookies.islogin!="theatre"){
+      res.status(404).json({
+        result: "notloggedin"
+      });
+    }
+
     let sname = req.body.sname;
     let scategory = req.body.category;
     snackinfo
@@ -206,6 +238,13 @@ router.post("/removesnack", async function (req, res) {
   // });
   
   router.post("/editsavesnack", async function (req, res) {
+
+    if(req.cookies.islogin!="theatre"){
+      res.status(404).json({
+        result: "notloggedin"
+      });
+    }
+
     let flag = 0;
     let sname = req.body.esname;
     let scategory = req.body.escategory;

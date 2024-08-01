@@ -7,6 +7,11 @@ const theatresignupinfo = require("../../models/theatre/signup");
 const userTinfo = require("../../models/theatre/abouttheatre")
 
 router.get("/", function (req, res) {
+  if(req.cookies.islogin!="user"){
+    res.status(404).json({
+      result: "notloggedin"
+    });
+  }
   res.json({ premiumclients: premiumclients });
 });
 
@@ -40,6 +45,14 @@ router.post("/", async (req, res, next) => {
 })
 
 router.get("/getsuggestion", async (req, res) => {
+
+
+  if(req.cookies.islogin!="user"){
+    res.status(404).json({
+      result: "notloggedin"
+    });
+  }
+
   let value = await theatresignupinfo.find({});
   res.json(value);
 });

@@ -6,11 +6,11 @@ const theatrereviewdata = require("../../models/user/theatrereview");
 router.get("/", async function (req, res) {
 
 
-  // if(req.cookies.islogin!="theatre"&&req.cookies.islogin!="admin"){
-  //   res.status(404).json({
-  //     result: "notloggedin"
-  //   });
-  // }
+  if(req.cookies.islogin!="theatre"){
+    res.status(404).json({
+      result: "notloggedin"
+    });
+  }
  
   let treviewsarr;
   let value = await theatrereviewdata.find({

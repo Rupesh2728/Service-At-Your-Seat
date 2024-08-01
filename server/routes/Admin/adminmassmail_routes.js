@@ -10,11 +10,11 @@ const theatresignupinfo = require("../../models/theatre/signup");
 
 router.post("/", async function (req, res) {
 
-  // if(req.cookies.islogin!="admin"){
-  //   res.status(404).json({
-  //     result: "Admin Should login"
-  //   });
-  // }
+  if(req.cookies.islogin!="admin"){
+    res.status(404).json({
+      result: "Admin Should login"
+    });
+  }
 
   let subject = req.body.subject;
   let message = req.body.message;

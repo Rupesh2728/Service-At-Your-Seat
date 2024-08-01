@@ -96,21 +96,14 @@ async function fillLatestandUpcoming(datevalue, city, latestmovies1, upcomingmov
 
 
 router.post("/", async (req, res) => {
-  console.log(req.cookies.islogin);
-  if(!req.cookies.islogin){
-    res.status(404).json({
-      result: "notloggedin"
-    });
-  }
-
-  else{
+ 
     if(req.cookies.islogin!="user" && req.cookies.islogin!="admin")
       {
        res.status(404).json({
          result: "notloggedin"
        });
       }
-  }
+ 
   
 
   let default_city = req.body.location;
@@ -237,6 +230,14 @@ router.get("/timings", async (req, res) => {
 });
 
 router.post("/timings", async function (req, res) {
+
+  if(req.cookies.islogin!="user"){
+    res.status(404).json({
+      result: "notloggedin"
+    });
+  }
+
+
   let timeselected = req.body.time;
   let name = req.query.name;
   let city = req.query.city;
@@ -457,6 +458,13 @@ router.get("/seatarrangement", async (req, res) => {
 
 
 router.post("/searchbar", async function (req, res) {
+  
+  if(req.cookies.islogin!="user"){
+    res.status(404).json({
+      result: "notloggedin"
+    });
+  }
+
   let moviename = req.body.moviename;
   let city = req.body.City;
 
@@ -464,6 +472,13 @@ router.post("/searchbar", async function (req, res) {
 });
 
 router.post("/getsuggestion", async function (req, res) {
+
+  if(req.cookies.islogin!="user"){
+    res.status(404).json({
+      result: "notloggedin"
+    });
+  }
+
   let city = req.body.city;
   let today = req.body.datevalue;
   let latestmovies = [];

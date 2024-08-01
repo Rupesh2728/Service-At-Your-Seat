@@ -9,6 +9,12 @@ const rentalmovieinfo = require("../../models/theatre/rentalmovieslist.js");
 
 router.get("/", async function (req, res) {
 
+  if(req.cookies.islogin!="admin"){
+    res.status(404).json({
+      result: "Admin Should login"
+    });
+  }
+
 
     let rentalmoviearr = await movieinfo.find({});
     let value1 = await rentalmovieinfo.find({});
@@ -37,11 +43,11 @@ router.get("/", async function (req, res) {
 
 
 router.post("/adminrentalmovieinfo", async function (req, res) {
-  // if (req.cookies.islogin != "admin") {
-  //   res.status(404).json({
-  //     result: "Admin Should login"
-  //   });
-  // }
+  if (req.cookies.islogin != "admin") {
+    res.status(404).json({
+      result: "Admin Should login"
+    });
+  }
   let mName = req.body.mName;
   let theatreimgurl = req.body.theatreimgurl;
   let lang = req.body.lang;
@@ -147,11 +153,11 @@ router.post("/adminrentalmovieinfo", async function (req, res) {
 
 router.delete("/adminremovemovie", async function (req, res) {
 
-  // if (req.cookies.islogin != "admin") {
-  //   res.status(404).json({
-  //     result: "Admin Should login"
-  //   });
-  // }
+  if (req.cookies.islogin != "admin") {
+    res.status(404).json({
+      result: "Admin Should login"
+    });
+  }
 
   let mName = req.body.moviename;
   let value1 = await movieinfo.find({ MovieName: mName });
@@ -181,11 +187,11 @@ router.delete("/adminremovemovie", async function (req, res) {
 
 router.post("/getmovieinfo", async function (req, res) {
 
-  // if (req.cookies.islogin != "admin") {
-  //   res.status(404).json({
-  //     result: "Admin Should login"
-  //   });
-  // }
+  if (req.cookies.islogin != "admin") {
+    res.status(404).json({
+      result: "Admin Should login"
+    });
+  }
 
   let mname = req.body.mname;
   let value1 = await movieinfo.find({ MovieName: mname });

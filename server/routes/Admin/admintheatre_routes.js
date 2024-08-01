@@ -16,11 +16,11 @@ const showdatailsinfo = require("../../models/theatre/movieshowdetails");
 
 router.get("/", async function (req, res) {
 
-  // if(req.cookies.islogin!="admin"){
-  //   res.status(404).json({
-  //     result: "Admin Should login"
-  //   });
-  // }
+  if(req.cookies.islogin!="admin"){
+    res.status(404).json({
+      result: "Admin Should login"
+    });
+  }
    
   let value = await theatresignupinfo.find({});
   // if (req.cookies.isUserLogin)
@@ -35,11 +35,11 @@ router.get("/", async function (req, res) {
 
 router.delete("/removetheatre", async function (req, res) {
 
-  // if(req.cookies.islogin!="admin"){
-  //   res.status(404).json({
-  //     result: "Admin Should login"
-  //   });
-  // }
+  if(req.cookies.islogin!="admin"){
+    res.status(404).json({
+      result: "Admin Should login"
+    });
+  }
 
   let treffnum = req.body.tid;
   await theatresignupinfo.deleteOne({ tReferenceNumber: treffnum });

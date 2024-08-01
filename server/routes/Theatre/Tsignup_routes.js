@@ -7,11 +7,11 @@ const md5 = require("md5");
 const theatresignupinfo = require("../../models/theatre/signup");
 const theatreverification = require("../../models/Admin/theatreverification");
 
-router.get("/", function (req, res) {
-  const show_error = req.cookies.show_error;
-  res.clearCookie("show_error");
-  res.render("TSignup", { show_error: show_error });
-});
+// router.get("/", function (req, res) {
+//   const show_error = req.cookies.show_error;
+//   res.clearCookie("show_error");
+//   res.render("TSignup", { show_error: show_error });
+// });
 
 
 

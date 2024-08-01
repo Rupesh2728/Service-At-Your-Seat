@@ -6,47 +6,6 @@ const ticketinfo = require("../../models/user/ticketsinfo");
 const theatresignupinfo = require("../../models/theatre/signup");
 const snackinfo = require("../../models/theatre/snackinfo");
 
-/**
- * @swagger
- * /snacks:
- *   get:
- *     summary: Get available snacks for a ticket
- *     tags: [USER SNACKS]
- *     responses:
- *       '200':
- *         description: Successful response
- *         content:
- *           application/json:
- *             schema:
- *               type: object
- *               properties:
- *                 TicketId:
- *                   type: string
- *                   description: Identifier of the ticket
- *                 fooditem:
- *                   type: array
- *                   description: Available snacks for the ticket
- *                   items:
- *                     type: string
- *                 ticketarr:
- *                   type: array
- *                   description: Array of tickets associated with the user
- *                   items:
- *                     type: object
- *       '404':
- *         description: User is not logged in
- *         content:
- *           application/json:
- *             schema:
- *               type: object
- *               properties:
- *                 result:
- *                   type: string
- *                   description: Indicates that the user is not logged in
- *                   example: notloggedin
- *       '500':
- *         description: Some error happened
- */
 
 
 router.get("/", async (req, res) => {
@@ -128,6 +87,13 @@ router.get("/", async (req, res) => {
 
 
 router.post("/", async (req, res) => {
+
+  if(req.cookies.islogin!="user"){
+    res.status(404).json({
+      result: "notloggedin"
+    });
+  }
+
   let ticketid = req.body.Ticketid;
 
   res.cookie("TicketIdForSnacks", ticketid);

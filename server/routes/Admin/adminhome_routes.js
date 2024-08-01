@@ -14,11 +14,11 @@ const userinfo = require("../../models/user/signup");
 
 router.get("/", async function (req, res) {
 
-  // if(req.cookies.islogin!="admin"){
-  //   res.status(404).json({
-  //     result: "Admin Should login"
-  //   });
-  // }
+  if(req.cookies.islogin!="admin"){
+    res.status(404).json({
+      result: "Admin Should login"
+    });
+  }
 
   let msgobjarr = [];
   let theatreverificationarr = [];
@@ -49,26 +49,17 @@ router.get("/", async function (req, res) {
 
   res.json(obj);
 
-  // if (req.cookies.isUserLogin)
-  //   res.render("adminhomepage", {
-  //     msgobjarr: msgobjarr,
-  //     tnum: tnum,
-  //     unum: unum,
-  //     theatreverificationarr: theatreverificationarr,
-  //   });
-  // else {
-  //   res.redirect("/login");
-  // }
+
 });
 
 
 router.post("/accepttheatre", async function (req, res) {
 
-  // if(req.cookies.islogin!="admin"){
-  //   res.status(404).json({
-  //     result: "Admin Should login"
-  //   });
-  // }
+  if(req.cookies.islogin!="admin"){
+    res.status(404).json({
+      result: "Admin Should login"
+    });
+  }
 
 
   let temail = req.body.temail;
@@ -135,11 +126,11 @@ router.post("/accepttheatre", async function (req, res) {
 router.post("/rejecttheatre", async function (req, res) {
 
    
-  // if(req.cookies.islogin!="admin"){
-  //   res.status(404).json({
-  //     result: "Admin Should login"
-  //   });
-  // }
+  if(req.cookies.islogin!="admin"){
+    res.status(404).json({
+      result: "Admin Should login"
+    });
+  }
 
   let temail = req.body.temail;
   let subject = "Theatre Registration Declined By SAYS";

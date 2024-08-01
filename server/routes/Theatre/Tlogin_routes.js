@@ -28,12 +28,12 @@ router.post("/", async function (req, res) {
   }
   else {
     console.log("TLogin success");
-    res.cookie("currtheatrereffnum", value[0].tReferenceNumber);
+    res.cookie("currtheatrereffnum", value[0].tReferenceNumber,process.env.options);
     let k =
       value[0].city.charAt(0).toUpperCase() +
       value[0].city.slice(1).toLowerCase();
-   res.cookie("currtheatrecity", k);
-   res.cookie("islogin","theatre");
+   res.cookie("currtheatrecity", k, process.env.options);
+   res.cookie("islogin","theatre",process.env.options);
     res.status(200).json({
       result: "theatre",
       currtheatrereffnum: value[0].tReferenceNumber,
