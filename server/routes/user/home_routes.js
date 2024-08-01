@@ -4,7 +4,7 @@ const premiumclients = require("./Common/premiumclients");
 
 //Database
 const theatresignupinfo = require("../../models/theatre/signup");
-const userTinfo = require("../../models/theatre/abouttheatre")
+const userTinfo = require("../../models/theatre/abouttheatre");
 
 router.get("/", function (req, res) {
   res.json({ premiumclients: premiumclients });
@@ -17,6 +17,7 @@ router.post("/", async (req, res, next) => {
       result: "notloggedin"
     });
   }
+
   try {
     const loc = req.body.loc;
     const treffarr = [];
