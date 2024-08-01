@@ -119,70 +119,18 @@ const AboutUs = () => {
         </Container>
       </div>
       <div className={styles.aboutusdiv3}>
-        {/* Team-member-1 */}
-        <Col>
-          <div className={styles.column}>
-            <div className={styles.knowcard}>
-              <img
-                src="https://bootstrapious.com/i/snippets/sn-about/avatar-3.png"
-                alt=""
-              />
-              <h5>Rupesh</h5>
-              <span>CEO-Founder</span>
-              <ul className={styles.socialList}>
-                <li className={styles.li}>
-                  {" "}
-                  <a href="/">
-                    <FontAwesomeIcon
-                      icon={faFacebookF}
-                      size="sm"
-                      style={{ color: "#0A66C2" }}
-                    />
-                  </a>
-                </li>
-                <li className={styles.li}>
-                  <a href="/">
-                    <FontAwesomeIcon
-                      icon={faTwitter}
-                      size="sm"
-                      style={{ color: "#0A66C2" }}
-                    />
-                  </a>
-                </li>
-                <li className={styles.li}>
-                  {" "}
-                  <a href="/">
-                    <FontAwesomeIcon
-                      icon={faInstagram}
-                      size="sm"
-                      style={{ color: "#ff0000" }}
-                    />
-                  </a>
-                </li>
-                <li className={styles.li}>
-                  {" "}
-                  <a href="/">
-                    <FontAwesomeIcon
-                      icon={faLinkedin}
-                      size="sm"
-                      style={{ color: "#0A66C2" }}
-                    />
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </Col>
-        {/* TeamMember-2 */}
 
-        <Col>
+        {/* Team-members*/}
+        {teamMembers.map((member,index)=>
+             
+          <Col key={index}>
           <div className={styles.column}>
             <div className={styles.knowcard}>
               <img
-                src="https://bootstrapious.com/i/snippets/sn-about/avatar-3.png"
+                src={member.imageUrl}
                 alt=""
               />
-              <h5>Rupesh</h5>
+              <h5>{member.name}</h5>
               <span>CEO-Founder</span>
               <ul className={styles.socialList}>
                 <li className={styles.li}>
@@ -228,168 +176,11 @@ const AboutUs = () => {
             </div>
           </div>
         </Col>
-        {/* TeamMember-3 */}
-        <Col>
-          <div className={styles.column}>
-            <div className={styles.knowcard}>
-              <img
-                src="https://bootstrapious.com/i/snippets/sn-about/avatar-3.png"
-                alt=""
-              />
-              <h5>Rupesh</h5>
-              <span>CEO-Founder</span>
-              <ul className={styles.socialList}>
-                <li className={styles.li}>
-                  {" "}
-                  <a href="/">
-                    <FontAwesomeIcon
-                      icon={faFacebookF}
-                      size="sm"
-                      style={{ color: "#0A66C2" }}
-                    />
-                  </a>
-                </li>
-                <li className={styles.li}>
-                  <a href="/">
-                    <FontAwesomeIcon
-                      icon={faTwitter}
-                      size="sm"
-                      style={{ color: "#0A66C2" }}
-                    />
-                  </a>
-                </li>
-                <li className={styles.li}>
-                  {" "}
-                  <a href="/">
-                    <FontAwesomeIcon
-                      icon={faInstagram}
-                      size="sm"
-                      style={{ color: "#ff0000" }}
-                    />
-                  </a>
-                </li>
-                <li className={styles.li}>
-                  {" "}
-                  <a href="/">
-                    <FontAwesomeIcon
-                      icon={faLinkedin}
-                      size="sm"
-                      style={{ color: "#0A66C2" }}
-                    />
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </Col>
-        {/* TeamMember-4 */}
-        <Col>
-          <div className={styles.column}>
-            <div className={styles.knowcard}>
-              <img
-                src="https://bootstrapious.com/i/snippets/sn-about/avatar-3.png"
-                alt=""
-              />
-              <h5>Rupesh</h5>
-              <span>CEO-Founder</span>
-              <ul className={styles.socialList}>
-                <li className={styles.li}>
-                  {" "}
-                  <a href="/">
-                    <FontAwesomeIcon
-                      icon={faFacebookF}
-                      size="sm"
-                      style={{ color: "#0A66C2" }}
-                    />
-                  </a>
-                </li>
-                <li className={styles.li}>
-                  <a href="/">
-                    <FontAwesomeIcon
-                      icon={faTwitter}
-                      size="sm"
-                      style={{ color: "#0A66C2" }}
-                    />
-                  </a>
-                </li>
-                <li className={styles.li}>
-                  {" "}
-                  <a href="/">
-                    <FontAwesomeIcon
-                      icon={faInstagram}
-                      size="sm"
-                      style={{ color: "#ff0000" }}
-                    />
-                  </a>
-                </li>
-                <li className={styles.li}>
-                  {" "}
-                  <a href="/">
-                    <FontAwesomeIcon
-                      icon={faLinkedin}
-                      size="sm"
-                      style={{ color: "#0A66C2" }}
-                    />
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </Col>
-        {/* TeamMember-5 */}
-        <Col>
-          <div className={styles.column}>
-            <div className={styles.knowcard}>
-              <img
-                src="https://bootstrapious.com/i/snippets/sn-about/avatar-3.png"
-                alt=""
-              />
-              <h5>Rupesh</h5>
-              <span>CEO-Founder</span>
-              <ul className={styles.socialList}>
-                <li className={styles.li}>
-                  {" "}
-                  <a href="/">
-                    <FontAwesomeIcon
-                      icon={faFacebookF}
-                      size="sm"
-                      style={{ color: "#0A66C2" }}
-                    />
-                  </a>
-                </li>
-                <li className={styles.li}>
-                  <a href="/">
-                    <FontAwesomeIcon
-                      icon={faTwitter}
-                      size="sm"
-                      style={{ color: "#0A66C2" }}
-                    />
-                  </a>
-                </li>
-                <li className={styles.li}>
-                  {" "}
-                  <a href="/">
-                    <FontAwesomeIcon
-                      icon={faInstagram}
-                      size="sm"
-                      style={{ color: "#ff0000" }}
-                    />
-                  </a>
-                </li>
-                <li className={styles.li}>
-                  {" "}
-                  <a href="/">
-                    <FontAwesomeIcon
-                      icon={faLinkedin}
-                      size="sm"
-                      style={{ color: "#0A66C2" }}
-                    />
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </Col>
+               
+
+        )}
+        
+    
       </div>
 
       <Footer />
