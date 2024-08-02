@@ -24,7 +24,9 @@ router.get("/", async (req, res) => {
   // console.log(value1);
   if (value1.length!=0){
     ticketarr = value1[0]["Ticketinfo"];
+   
   let n = ticketarr.length;
+  console.log(ticketarr);
 
     let ticketid;
     let theatrename;
@@ -33,7 +35,14 @@ router.get("/", async (req, res) => {
     if (req.cookies.TicketIdForSnacks) {
       ticketid = req.cookies.TicketIdForSnacks;
     } else {
-      ticketid = ticketarr[n - 1]["TicketId"];
+      if(ticketarr.length!=0)
+      {
+        ticketid = ticketarr[n - 1]["TicketId"];
+      }
+      else
+       {
+        ticketid = null;
+       }
     }
 
     let value11 = await ticketinfo.findOne({
@@ -43,7 +52,7 @@ router.get("/", async (req, res) => {
     value11 = value11.Ticketinfo;
 
     for (let i = 0; value1.length; i++) {
-      if (ticketid == value11[i]["TicketId"]) {
+      if (ticketid!==null && ticketid === value11[i]["TicketId"]) {
         theatrename = value11[i]["theatrename"];
         location = value11[i]["location"];
         break;
@@ -54,9 +63,11 @@ router.get("/", async (req, res) => {
       tName: theatrename,
       city: location,
     });
-    value2 = value2.tReferenceNumber;
+    if(value2)
+     value2 = value2.tReferenceNumber;
 
     let value3 = await snackinfo.findOne({ tReferenceNumber: value2 });
+    if(value3)
     value3 = value3.snackarr;
 
     // console.log(value3);

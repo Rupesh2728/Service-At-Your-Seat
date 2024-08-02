@@ -7,6 +7,7 @@ import {faIndianRupeeSign,faStar,faPlusCircle,faCartShopping } from '@fortawesom
 import Cart from './Cart';
 import Card from './Card';
 import URL from '../../URL';
+import sorryimg from '../../Assests/sorrylogo.png';
 
 
 
@@ -122,12 +123,19 @@ const Snacks = () => {
               <div className=' hover:cursor-pointer'>
                 <label>Ticket Id :</label>
                 <select name="Ticketid" value={ticketid}  className={classes.ticketid} onChange={handleSelectChange}>   
-                    {ticketarr.map(ticket=>{
+                    {ticketarr.length!==0 && ticketarr.map(ticket=>{
                       return (
                       <option value={ticket.TicketId}>
                          {ticket.TicketId}
                      </option> )
                     })} 
+
+                    {
+                      ticketarr.length===0 && <>
+                      <option value={"No movie tickets booked"}>
+                         No movie tickets booked
+                     </option> </>  
+                    }
                 </select>
               </div>
             </div>
@@ -140,10 +148,18 @@ const Snacks = () => {
 
       </div>
    
-    
-      <div className={classes.food_items}>
+      {fooditemarr.length===0 && <>
+      <div className='text-center mb-[15rem] mt-[5rem]'>
+      <img src={sorryimg} alt='SORRY' className='m-auto w-[7rem] h-[7rem] mt-[2rem]'/>
+      <p className={classes.category_name} >No snacks available, please book a ticket to see the available snacks</p>
+      </div>
+      </>}
+      {
+        fooditemarr.length!==0 && <>
+        <div className={classes.food_items}>
             <div className={classes.biriyani}>
                     <p className={classes.category_name}>Popcorn</p>
+                       
                        {  
                         fooditemarr.map(fooditem=>{
                            if(fooditem.category==="Popcorn")
@@ -218,7 +234,8 @@ const Snacks = () => {
     
                   </div>
 
-            </div>
+            </div></>
+      }
 
   </>
   )

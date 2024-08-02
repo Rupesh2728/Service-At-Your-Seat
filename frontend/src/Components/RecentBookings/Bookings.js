@@ -19,7 +19,14 @@ const Bookings = (props) => {
       <div className={classes.background}></div>
       <div className={classes.container_own}>
           <h2 className={classes.heading}>Recent Bookings</h2>
-          <table className={classes.table}>
+          
+              {
+                tickets.length===0 && <p className='text-[gold] text-[2rem] mt-[1rem]'>OOPS...No Movie Tickets booked!!!</p>
+              }
+
+              {
+                tickets.length!==0 && <>
+                <table className={classes.table}>
             <thead>
               <tr>
                 <th className={classes.th}>Ticket ID</th>
@@ -45,7 +52,9 @@ const Bookings = (props) => {
                 );
               })}
             </tbody>
-          </table>
+          </table></>
+              }
+          
         </div>  
     </>
   );

@@ -228,6 +228,7 @@ router.get("/profilepic", async function (req, res) {
     res.json("0");
     return;
   }
+
    console.log(value1[0].path);
   let yourString = value1[0].path;
   let convertedString = yourString.replace(/\\/g, '/');
