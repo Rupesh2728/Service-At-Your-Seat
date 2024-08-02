@@ -5,6 +5,9 @@ import classes from './ProfileDropDown.module.css';
 import { Link ,useNavigate} from 'react-router-dom';
 import { useState,useEffect } from 'react';
 import URL from '../../../../URL';
+import { useDispatch } from 'react-redux';
+import { logout } from '../../../../ReduxStores/LoginRedux';
+
 
 
 const ProfileDropDown=(props)=>{
@@ -33,7 +36,9 @@ const ProfileDropDown=(props)=>{
     renderUserpic();
   }, []);
   
-   
+  
+  const dispatch = useDispatch();
+
   async function signout(){
 
    await fetch(URL+'/signout', {
@@ -43,6 +48,8 @@ const ProfileDropDown=(props)=>{
     },
     credentials: 'include',
   });
+    
+   dispatch(logout());
   
   navigate('/');
 

@@ -6,6 +6,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faEnvelopesBulk } from '@fortawesome/free-solid-svg-icons';
 import {Link,useNavigate} from "react-router-dom";
 import URL from '../../../../URL';
+import { useDispatch } from 'react-redux';
+import { logout } from '../../../../ReduxStores/LoginRedux';
 
 
 
@@ -13,11 +15,10 @@ import URL from '../../../../URL';
 
 const AdminNav = ({signout}) => {
 
-  const naviagte=useNavigate()
-  
+  const navigate=useNavigate();
+  const dispatch = useDispatch();
+
 async function Logout(){
-  
-  
 
   await fetch(URL+'/signout', {
     method: 'get',
@@ -26,8 +27,10 @@ async function Logout(){
     },
     credentials: 'include',
   });
-  
-  naviagte('/');
+
+  dispatch(logout());
+
+  navigate('/');
 
 } 
 

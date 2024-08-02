@@ -4,6 +4,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 import { Link, useNavigate } from "react-router-dom";
 import URL from "../../../URL";
+import { useDispatch } from "react-redux";
+import { logout } from "../../../ReduxStores/LoginRedux";
 
 
 function TNavbar() {
@@ -13,11 +15,12 @@ function TNavbar() {
     const handleDropdownToggle = () => {
       setDropdownOpen(!dropdownOpen);
     };
+
+    const dispatch = useDispatch();
+    
    
     async function signout(){
-       
-      console.log("hi");
-
+      
       await fetch(URL+'/Tsignout', {
         method: 'get',
         headers: {
@@ -25,6 +28,8 @@ function TNavbar() {
         },
         credentials: 'include',
       });
+      
+      dispatch(logout());
       
       navigate('/');
 

@@ -44,7 +44,7 @@ const Review = () => {
   const OnSubmitHandler=async (e)=>{
           e.preventDefault();
 
-    const response = await fetch(`http://localhost:5000/reviews?name=${moviename}`, {
+    const response = await fetch(URL+`/reviews?name=${moviename}`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
