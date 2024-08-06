@@ -27,7 +27,59 @@
 
 <h2 align="left">Features</h2>
 
-- Code cleaning and structure, **Well organised code, using MVC and REST Architecture in the server**
+<h3 align="center">Multiple Dashboards</h3>
+
+<h3 align="left">Client : </h3> 
+
+- Book Cinema Tickets
+
+- Order snacks from the seat
+
+- Movie Reviews
+
+- Explore theatres, based on location
+
+- Theatre Reviews
+
+- Website complaints
+
+- Fascinating news related to movies
+
+<h3 align="left">Theatre : </h3>
+
+- Rent movies to play in theatre
+
+- Add or remove a movie from theatre
+
+- Screen Seating Arrangement
+
+- Schedule shows
+
+- Add or remove Snacks
+
+- Maintain theatre profile
+
+- Observe theatre reviews
+
+<h3 align="left">Admin</h3>
+
+- Theatre Verification
+
+- Announcements through Mass Mailing
+  
+- Add movies for rental purposes
+  
+- Remove any user
+
+- Remove any theatre
+  
+- Consider Website Reviews
+
+<h3 align="center"> General Features </h3> 
+
+- Login and Register, **Users and theatres can login and register**
+
+- Clean code and structure, **Well organised code, using MVC and REST Architecture in the server**
 
 - **Well designed and cool,interactive UI**
 
