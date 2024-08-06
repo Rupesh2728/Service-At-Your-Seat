@@ -1,6 +1,6 @@
 <h1 align="center">Service At Your Seat</h1>
 <h3 align="center">The application will allow users to book cinema tickets with ease and also contains added cool features</h3>
-<h4 align="center">You can visit my website at <a href="https://service-at-your-seat.vercel.app/" target="blank">https://simple-movie-explorer.vercel.app</a></h3>
+<h4 align="center">You can visit our website at <a href="https://service-at-your-seat.vercel.app/" target="blank">https://simple-movie-explorer.vercel.app</a></h3>
 
 
 <h2 align="left">Tech Stack and Tools :</h2>
