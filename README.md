@@ -27,7 +27,7 @@
 
 <h2 align="left">Features</h2>
 
-<h3 align="center">Multiple Dashboards</h3>
+<h3 align="left">Multiple Dashboards</h3>
 
 <h3 align="left">Client : </h3> 
 
@@ -61,7 +61,7 @@
 
 - Observe theatre reviews
 
-<h3 align="left">Admin</h3>
+<h3 align="left">Admin:</h3>
 
 - Theatre Verification
 
