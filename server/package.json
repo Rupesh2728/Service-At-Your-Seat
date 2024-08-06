@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "jest --reporters=default --reporters=jest-html-reporter",
-    "start": "nodemon app.js"
+    "start": "nodemon app.js",
+    "watch": "nodemon src/server.js"
   },
   "author": "",
   "license": "ISC",

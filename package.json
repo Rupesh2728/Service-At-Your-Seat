@@ -1,0 +1,23 @@
+{
+  "name": "serviceatyourseat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "install-server": "npm install --prefix server",
+    "install-frontend": "npm install --prefix frontend",
+    "install": "npm run install-server && npm run install-frontend",
+    "start-server": "npm start --prefix server",
+    "watch-server": "npm run watch --prefix server",
+    "start-client": "npm start --prefix frontend",
+    "watch-client": "npm run watch --prefix frontend",
+    "start": "concurrently \"npm run start-server\" \"npm run start-client\"",
+    "watch": "concurrently \"npm run watch-server\" \"npm run watch-client\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
