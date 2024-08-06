@@ -37,14 +37,15 @@
 
 
 <h2 align="left">Installation</h2>
-<h3>To get started with this project, clone the repository and install the necessary dependencies</h3>
+<h3 align="center">To get started with this project, clone the repository or download the zip file.</h3>
+<h4 align="center">Install the necessary dependencies</h4>
 
 ```bash
 # Clone the repository
 git clone https://github.com/staion1504/Service-At-Your-Seat.git
 
 # Navigate to the project directory
-cd 
+cd Service-At-Your-Seat-main
 
 # Install dependencies
 npm install
