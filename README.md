@@ -4,10 +4,10 @@
 
 
 <h2 align="left">Tech Stack and Tools :</h2>
-<h3 align="left">Logo Design</h3>
-<img align="left" alt="coding" width="350" src="./frontend/src/Assests/finalmainlogo.png">
+<h3 align="right">Logo Design</h3>
+<img align="right" alt="coding" width="350" src="./frontend/src/Assests/finalmainlogo.png">
 
-<p align="right">
+<p align="left">
 <a href="https://reactjs.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="80" height="80"/> </a>
 <a href="https://tailwindcss.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" alt="tailwind" width="80" height="80"/> </a>
 <a href="https://getbootstrap.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg" alt="bootstrap" width="80" height="80"/> </a>
