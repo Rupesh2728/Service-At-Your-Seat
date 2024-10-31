@@ -88,7 +88,13 @@
 
 <h2 align="left">Website Video</h2>
 
+- Presented here is a brief overview video of our website, providing insights into its some of the functionalities and design.
 
+- Please take a moment to watch and gain an understanding of the platform's offerings.
+
+- For a more comprehensive understanding, please explore the website directly at https://service-at-your-seat.vercel.app
+
+  
 https://github.com/user-attachments/assets/e12361c7-7af9-4a3a-85d1-58417c3daa9b
 
 
